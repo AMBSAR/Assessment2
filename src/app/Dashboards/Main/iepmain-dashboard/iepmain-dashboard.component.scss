@@ -1,0 +1,59 @@
+
+body,html {
+    margin: 0;
+    padding: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.mainDashboard {
+    height: 100vh;
+    width: 100vw;
+    display: flex;
+    flex-grow: 1;
+    top: 0;
+    bottom: 0;
+    right: 0;
+    left: 0;
+    max-width: 100vw;
+    max-height: 100vh;
+    position: fixed;
+}
+
+.container {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.header {
+    flex: 1;
+    height: 10vh;
+}
+
+.dashboardContainer {
+    height: 100%;
+    width: 100%;
+    display: block;
+    justify-content:stretch;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    height: 100%;
+}
+
+.navigationBar{
+    width: fit-content;
+}
+
+router-outlet {
+    justify-self: flex-start;
+    width:100%;
+    display: flex;
+    justify-content: flex-start;
+}

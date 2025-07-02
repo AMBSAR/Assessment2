@@ -1,0 +1,126 @@
+body,html {
+    margin: 0;
+    padding: 0;
+    flex:1;
+    display:flex;
+    justify-content: stretch;
+    justify-items: stretch;
+    justify-self: stretch;
+    align-items: flex-start;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    height: 100%;
+    width: 100%;
+    flex-shrink: 1;
+    flex:1;
+    flex-grow: 1;
+    display: flex;
+    justify-self: stretch;
+    justify-items:stretch;
+    justify-content: stretch;
+    column-gap: 15px;
+}
+
+.leftsideView {
+    width: 400px;
+    flex: 1;
+    flex-grow: 1;
+    border-right-width: 1px;
+    border-right-color: gray;
+    background-color: whitesmoke;
+}
+
+.headingArea {
+    display: flex;
+    height: 65px;
+    padding-bottom: 20px;
+    padding-top: 20px;
+}
+
+.left {
+    justify-self: left;
+    width: 100%;
+    font-weight: bold;
+    margin-left: 10px;
+}
+
+.right {
+    justify-self: right;
+    padding: 5px 10px;
+}
+
+kendo-tabstrip {
+    font-size:x-small;
+    height: 100%;
+    overflow-y: auto;
+}
+
+.separator {
+    height: 1px;
+    background-color: lightgray;
+    width: 100%;
+}
+
+.verticalSeparator{
+    height: 100%;
+    width: 1px;
+    background-color: lightgray;
+}
+
+button {
+    border-width: 0px;
+    background-color: transparent;
+}
+
+.rightSideView {
+    justify-self: right;
+    width: 100%;
+}
+
+.rightContainer {
+    justify-items: right;
+}
+
+.content {
+    justify-items: stretch;
+}
+
+.treeViewArea {
+    flex: 1;
+    flex-grow: 1;
+    overflow: auto;
+}
+
+app-project-tree {
+    height: 700px;
+    display: flex;
+    flex: 1;
+    overflow-y: hidden;
+}
+
+::ng-deep .k-tabstrip-top > .k-tabstrip-items-wrapper .k-item .k-link {
+    font-size: 11px;
+}
+
+::ng-deep .k-item.k-selected {
+    border-width: 2px;
+    font-weight: bold;
+    color: violet;
+}
+
+::ng-deep .k-tabstrip-top > .k-tabstrip-items-wrapper .k-item:active, .k-tabstrip-top > .k-tabstrip-items-wrapper .k-item.k-active {
+    border-width: 2px;
+    font-weight: bold;
+    color: red;
+}
+
+::ng-deep .k-tabstrip-top > .k-tabstrip-items-wrapper .k-item:active, .k-tabstrip-top > .k-item.k-selected .k-link-text {
+    font-weight: bold;
+    color: blueviolet;
+}
+//.k-tabstrip-top > .k-tabstrip-items-wrapper .k-item .k-link

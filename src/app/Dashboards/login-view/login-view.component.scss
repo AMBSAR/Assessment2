@@ -1,0 +1,161 @@
+:root {
+    --checkbox-border-color: rgb(160, 160, 160);
+}
+
+* {
+    box-sizing: border-box;
+}
+
+.componentOuter{
+    display: flexbox;
+    margin: auto;
+    position: relative;
+    padding-top: 5%;
+}
+
+.container {
+    display: flex;
+    margin: auto;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.outerBorder {
+    border-radius: 10px;
+    //box-shadow: 0px 0px 20px 5px rgba(120, 207, 228, 0.35);
+    width: 450px;
+    height: 550px;
+    padding: 50px;
+}
+
+img {
+    box-sizing: content-box;
+    align-items: center;
+    vertical-align: top;
+    margin-bottom: 45px;
+    height:35px;
+}
+
+h1 {
+    font-size: medium;
+    margin-bottom: 20px;
+}
+
+kendo-textbox {
+    height: 25px;
+    width: 350px;
+}
+
+.inputControlsContainer {
+    width:375;
+    align-items: first baseline;
+}
+
+.login {
+    align-self: center;
+    height: 35px;
+    width: 300px;
+    margin-bottom: 15px;
+
+//    &:hover {
+//     box-shadow: 0px 0px 2px 3px rgba(120, 207, 228, 0.35);
+//     }
+}
+
+kendo-textbox {
+    text-indent: 1em;
+}
+
+kendo-label {
+    font-size: 10px;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.k-checkbox-label {
+    //margin-top: 3px;
+    font-size: small;
+    //margin-bottom: 5px;
+    font-weight: normal;
+}
+
+
+.rememberMeContainer {
+    display: flex;
+    justify-items: left;
+    margin-bottom: 25px;
+    align-items: center;
+    padding-left: 4px;
+} 
+
+::ng-deep kendo-textbox .k-input-inner::placeholder {
+                color: lightgray;
+         }
+
+// input[type="checkbox"] {
+//     margin-right: 5px;
+//     height: 15px;
+//     width: 15px;
+// }
+
+.mandatory {
+    margin-top: 5px;
+}
+.mandatory::after {
+    content: "*";
+    color: red;
+}
+
+button {
+    align-self: center;
+    background-color: rgb(20, 125, 100);
+    color: white;
+    font-size: 12px;
+}
+
+kendo-loader {
+    color: rgb(20, 125, 100);
+}
+
+.Message {
+    color: red;
+    font-size: x-small;
+    text-align: center;
+}
+
+.k-block {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        min-height: 80px;
+      }
+
+.loader {
+    z-index: 1;
+    position:absolute;
+    border-style: none;
+    background-color: transparent;
+    outline: none;
+}
+
+.checkboxRememberme {
+    //color:rgb(20, 125, 100);
+    //color: k-color(primary);
+    //background-color: rgb(20, 125, 100);
+    //accent-color: rgb(20, 125, 100);
+    margin-right: 5px;
+}
+
+
+.k-input-inner {
+    text-indent: 1em !important;
+}
+
+::ng-deep .k-checkbox {
+    outline: 2px solid darkgray;
+    border-radius: 1px;
+    border-style: none;
+    height: 15px;
+    width: 15px;
+}

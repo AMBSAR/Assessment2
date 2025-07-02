@@ -1,0 +1,50 @@
+<head>
+    <!-- <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=device_hub" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=apps" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=folder_managed" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=folder" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=verified" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=engineering" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0&icon_names=settings" /> -->
+</head>
+<div class="sidebar">
+    <div class="nav-content">
+        <div class="home">
+            <a (click)="dashboardSelected(-1, home.router)">
+                <!-- <span class="iconView">{{ home.svgIcon }}</span>
+                    <span class="material-icons-outlined iconView">device_hub</span> -->
+                <kendo-svg-icon [icon]="home.svgIcon"></kendo-svg-icon>
+            </a>
+        </div>
+        <!--<nav class="nav-items">
+             <div class="home">
+                <a [routerLink]="home.router">
+                    <kendo-svg-icon [icon]="home.icon"></kendo-svg-icon>
+                </a>
+            </div> -->
+        <!-- <div class="separator">
+            </div> -->
+        <div class="toolNavigation">
+            <ul>
+                @for (item of items; track item;) {
+                <li (click)="dashboardSelected($index, item.router)">
+                    <a [routerLink]="item.router"
+                        [ngClass]="{ 'selected-item': $index === selectedIndex }">
+                        <kendo-svg-icon [icon]="item.svgIcon"></kendo-svg-icon>
+                    </a>
+                </li>
+                }
+            </ul>
+        </div>
+        <!-- <kendo-drawer-container>
+            <kendo-drawer class="drawerItem" #drawer [items]="items" mode="push" [mini]="true" [(expanded)]="expanded"
+                (select)="onSelect($event)">
+                <ng-template kendoDrawerItemTemplate let-item let-index="index">
+                    <div class="menuItems" [ngClass]="{ 'selected-item': index === selectedIndex }">
+                        <kendo-svg-icon [icon]="item.svgIcon"></kendo-svg-icon>
+                    </div>
+                </ng-template>
+            </kendo-drawer>
+        </kendo-drawer-container> -->
+    </div>
+</div>

@@ -1,0 +1,65 @@
+<div class="container">
+    <div class="header">
+        <div class="left">
+            <h2>Operations</h2>
+        </div>
+        <div class="rightContainer">
+            <div class="lastUploaded right">
+                <span class="textPart">Last Uploaded: <span class="valuePart">{{LastUploadedDate}}</span></span>
+            </div>
+            <div class="verticalSeparator"></div>
+            <div>
+                <span class="right ytdPercentage">YTD
+                    <div class="percentage-circle">
+                        <div class="circle" [style.--percentage]="YTD_Value">
+                            <span class="value">{{ YTD_Value }}%</span>
+                        </div>
+                    </div>
+                </span>
+            </div>
+            <div>
+                <button kendoButton class="dovsbuy"> Do Vs Buy</button>
+            </div>
+        </div>
+    </div>
+    <div class="tabContainer">
+        <kendo-tabstrip (tabSelect)="onTabSelect($event)">
+            <kendo-tabstrip-tab title="ISPO" [selected]="true">
+                <ng-template kendoTabContent class="content">
+                    <app-ispo-dashboard></app-ispo-dashboard>
+                </ng-template>
+            </kendo-tabstrip-tab>
+            <kendo-tabstrip-tab title="VDR" class="content">
+                <ng-template kendoTabContent>
+                    <!-- <app-page-tbd></app-page-tbd> -->
+                     <span>VDR</span>
+                </ng-template>
+            </kendo-tabstrip-tab>
+            <kendo-tabstrip-tab title="VDR Revision" class="content">
+                <ng-template kendoTabContent>
+                    <!-- <app-page-tbd></app-page-tbd> -->
+                     <span>VDR Rev</span>
+                </ng-template>
+            </kendo-tabstrip-tab>
+            <kendo-tabstrip-tab title="OTD Trends" class="content">
+                <ng-template kendoTabContent>
+                    <!-- <app-page-tbd></app-page-tbd> -->
+                     <span>OTD Trends</span>
+                </ng-template>
+            </kendo-tabstrip-tab>
+            <kendo-tabstrip-tab title="Engineering Productivity" class="content">
+                <ng-template kendoTabContent class="content">
+                    <!-- <app-page-tbd></app-page-tbd> -->
+                     <span>Engg Productivity</span>
+                </ng-template>
+            </kendo-tabstrip-tab>
+            <kendo-tabstrip-tab title="Technical Alignment" class="content">
+                <ng-template kendoTabContent class="content">
+                    <!-- <app-page-tbd></app-page-tbd> -->
+                     <span>Technical Alignment</span>
+                </ng-template>
+            </kendo-tabstrip-tab>
+        </kendo-tabstrip>
+    </div>
+
+</div>

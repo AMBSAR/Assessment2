@@ -1,0 +1,178 @@
+* {
+  box-sizing: border-box;
+}
+
+h2 {
+  padding: 0;
+  margin: 0;
+}
+
+.container {
+  flex: 1;
+  width: 100%;
+  max-width: calc(100vw - 16%);
+  right: 0;
+  bottom: 0;
+  position: relative;
+  flex-grow: 1;
+  flex-shrink: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.header {
+  flex: 1;
+  display: flex;
+  height: 65px;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  justify-items: stretch;
+  max-width: calc(100vw - 30%);
+  padding: 10px 0px;
+}
+
+.verticalSeparator {
+  width: 5px;
+  height: 50%;
+  background-color: gray;
+}
+
+kendo-circularprogressbar {
+  height: 25px;
+  width: 25px;
+  margin: 5px;
+}
+
+.left {
+  margin: 10px;
+  display: flex;
+  flex: 1;
+  align-self: center;
+  justify-self: flex-start;
+}
+
+.rightContainer {
+  flex: 2;
+  display: flex;
+  justify-self: flex-end;
+  justify-content: flex-end;
+  align-items: center;
+  align-content: center;
+  flex-wrap: nowrap;
+  position: relative;
+  //overflow: hidden;
+  margin-right: 25px;
+}
+
+.right {
+  align-self: center;
+  margin-right: 10px;
+}
+
+button {
+  padding: 5px;
+  align-self: center;
+  background-color: rgb(20, 125, 100);
+  color: white;
+  border-radius: 5px;
+  width: 120px;
+}
+
+.content {
+  width: 100%;
+  height: 100%;
+  justify-self: stretch;
+}
+
+.small-progress {
+  width: 22px;
+  height: 22px;
+  color: rgb(41, 155, 163);
+}
+
+.textPart {
+  font-size: small;
+  color: gray;
+}
+
+.valuePart {
+  font-size: small;
+  color: rgb(2, 167, 131);
+}
+
+.lastUploaded {
+  display: flex;
+  white-space: nowrap;
+}
+
+button .dovsbuy {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  padding: 5px;
+  width: 120px;
+  white-space: nowrap;
+  border-radius: 5px;
+  text-align: center;
+  height: 25px;
+}
+
+.percentage-circle {
+  .circle {
+    --percentage: 75;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: conic-gradient(#02a783 calc(var(--percentage) * 1%), #e0e0e0 0);
+
+    position: relative;
+    padding: 2px; // keep or adjust if needed
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 31px; // made it larger (was 28px)
+      height: 31px; // made it larger (was 28px)
+      border-radius: 50%;
+      background-color: #ecf0f1;
+      z-index: 1;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+
+    .value {
+      position: relative;
+      z-index: 2;
+      font-size: 12px;
+      color: #000;
+      font-weight: 500;
+    }
+  }
+}
+
+.ytdPercentage {
+  display: flex;
+  justify-content: center;
+  justify-items: center;
+  align-items: center;
+  column-gap: 10px;
+}
+
+::ng-deep .k-tabstrip-top > .k-tabstrip-items-wrapper .k-item:active, .k-tabstrip-top > .k-tabstrip-items-wrapper .k-item.k-active {
+    border-style: none;
+    font-weight: bold; // Make text bold
+    border-bottom: 2px solid gray !important; // Add bottom border
+}
+
+.tabContainer {
+  width: 100%;
+  max-width: calc(100vw - 30%);
+}
+
+
+

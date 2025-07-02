@@ -1,0 +1,178 @@
+* {
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    width: 100%;
+    height: 100%;
+    align-items: flex-start;
+    justify-content: flex-start;
+    flex-shrink: 1;
+    flex-grow: 1;
+}
+
+.searchTextBoxWrap {
+    width: 100%;
+}
+
+.cornerRoundedTextBox {
+    border-radius: 30px;
+    height: 25px;
+}
+
+.searchIcon {
+    position: absolute;
+    right: 20px;
+    color: lightgray;
+    margin: 5px;
+}
+
+.advanceSearch {
+    display: block;
+    background-color: rgb(20, 125, 100);
+    border-radius: 5px;
+    height: 30px;
+    color: white;
+    width: 100%;
+    text-align: center;
+    margin: 0;
+    font-size: small;
+}
+
+.advSearchContent {
+    text-align: center;
+    display: flex;
+    justify-self: center;
+    justify-items: center;
+    height: 100%;
+    position: relative;
+}
+
+kendo-treeview {
+    height: 100%;
+    //max-height: calc(100vh - 57%);
+    overflow-y: auto;
+    scrollbar-width: thin;
+    flex-shrink: 1;
+}
+
+.loader {
+    z-index: 1;
+    align-self: center;
+    border-style: none;
+    background-color: transparent;
+}
+
+
+.text {
+    display: block;
+    font-size: 11px;
+    width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.jobText {
+    font-size: 11px;
+    display: block;
+    width: 110px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.nodeItem {
+    display: flex;
+    justify-content: stretch;
+    align-items: center;
+}
+
+.nodeItem.selected {
+    background-color: var(--menu-item-highlight-color);
+}
+
+favButton {
+    width: 8px;
+    height: 8px;
+    justify-self: right;
+    position: absolute;
+    border-width: 0px;
+    background-color: transparent;
+    color: darkgreen;
+    opacity: 0.3;
+
+    // ::picker-icon {
+    //     width: 10px;
+    //     height: 10px;
+    //     color: darkgreen;
+    // }
+}
+
+.favourite {
+    color: navy;
+    opacity: 1.0;
+}
+
+.unfavourite {
+    color: gray;
+    opacity: 0.5;
+}
+
+#nodeCheckbox {
+    left: 0px;
+    justify-self: left;
+    position: relative;
+}
+
+#nodeProjectName {
+    margin-left: 10px;
+    justify-self: left;
+    position: relative;
+}
+
+
+.custom-icon {
+    font-size: 12px;
+    margin-right: 8px;
+    cursor: pointer;
+}
+//.k-tabstrip-top > .k-tabstrip-items-wrapper .k-item .k-link
+::nd-deep .k-checkbox-md, .k-checkbox, .k-checkbox-wrap{
+    outline: 2px solid pink !important;
+    height: 15px !important;
+    width: 15px !important;
+    border-radius: 0 !important;
+}
+
+::ng-deep .k-checkbox-checked {
+    border-radius: 0 !important;
+}
+
+.custom-checkbox {
+    outline: 2px solid blue !important;
+    height: 15px !important;
+    width: 15px !important;
+    border-radius: 0 !important;
+
+    & :checked {
+        border-radius: 0;
+    }
+}
+
+
+::ng-deep .k-treeview *, .k-treeview *::before, .k-treeview *::after > .k-checkbox-md, .k-checkbox, .k-checkbox-wrap{
+    outline: 2px solid red !important;
+    height: 12px !important;
+    width: 12px !important;
+    border-radius: 0 !important;
+}
+
+.customExpandCollapse{
+    font-size: 14px;
+      color: black;
+      margin-right: 5px;
+}

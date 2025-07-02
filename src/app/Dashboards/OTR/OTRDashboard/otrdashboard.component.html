@@ -1,0 +1,86 @@
+<div class="container">
+    @if(showTreeView) {
+    <div class="leftsideView">
+        <div class="headingArea">
+            <kendo-label text="Filter Contracts" class="left" #Heading />
+            <button kendoButton [svgIcon]="moreHorizontalIcon"></button>
+            <button kendoButton [svgIcon]="collapseIcon" (click)="onCollapseTreeView()"></button>
+        </div>
+        <div class="separator">
+        </div>
+        <div class="treeViewArea">
+            <kendo-tabstrip (tabSelect)="onTabSelect($event)">
+                <kendo-tabstrip-tab title="My Contracts" [selected]="true">
+                    <ng-template kendoTabContent>
+                        <div class="content">
+                            <app-project-tree [Type]="projectListType"></app-project-tree>
+                        </div>
+                    </ng-template>
+                </kendo-tabstrip-tab>
+                <kendo-tabstrip-tab title="All Contracts">
+                    <ng-template kendoTabContent>
+                        <div class="content">
+                            <app-project-tree [Type]="projectListType"></app-project-tree>
+                        </div>
+                    </ng-template>
+                </kendo-tabstrip-tab>
+                <kendo-tabstrip-tab title="Favourites">
+                    <ng-template kendoTabContent>
+                        <div class="content">
+                            <app-project-tree [Type]="projectListType"></app-project-tree>
+                        </div>
+                    </ng-template>
+                </kendo-tabstrip-tab>
+            </kendo-tabstrip>
+        </div>
+        <!-- <kendo-splitter orientation="vertical" style="height: 340px;">
+            <kendo-splitter-pane>
+                <kendo-splitter>
+                    <kendo-splitter-pane [collapsible]="true" size="10%">
+                        <div class="headingArea">
+                            <kendo-label text="Filter Contracts" class="left" #Heading />
+                            <kendo-svg-icon [icon]="moreHorizontalIcon" class="right"></kendo-svg-icon>
+                            <kendo-svg-icon [icon]="collapseIcon" class="right"></kendo-svg-icon>
+                        </div>
+                    </kendo-splitter-pane>
+    
+                    <kendo-splitter-pane>
+                        <div>
+                            <kendo-tabstrip (tabSelect)="onTabSelect($event)">
+                                <kendo-tabstrip-tab title="My Contracts" [selected]="true">
+                                    <ng-template kendoTabContent>
+                                        <div class="content">
+                                            <app-project-tree></app-project-tree>
+                                        </div>
+                                    </ng-template>
+                                </kendo-tabstrip-tab>
+                                <kendo-tabstrip-tab title="All Contracts">
+                                    <ng-template kendoTabContent>
+                                        <div class="content">
+                                            <app-project-tree></app-project-tree>
+                                        </div>
+                                    </ng-template>
+                                </kendo-tabstrip-tab>
+                                <kendo-tabstrip-tab title="Favourites">
+                                    <ng-template kendoTabContent>
+                                        <div class="content">
+                                            <app-project-tree></app-project-tree>
+                                        </div>
+                                    </ng-template>
+                                </kendo-tabstrip-tab>
+                            </kendo-tabstrip>
+                        </div>
+                    </kendo-splitter-pane>
+                </kendo-splitter>
+            </kendo-splitter-pane>
+        </kendo-splitter> -->
+    </div>
+    <!-- <div class="verticalSeparator">
+        </div> -->
+    }
+    <div class="rightSideView">
+        <div class="rightContainer">
+            <router-outlet style="flex:1; height: 100%; width: 100%; justify-content: stretch;"></router-outlet>
+        </div>
+    </div>
+</div>

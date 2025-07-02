@@ -1,0 +1,411 @@
+body,
+html {
+    margin: 0;
+    padding: 0;
+    flex: 1;
+    display: flex;
+    justify-content: stretch;
+    justify-items: stretch;
+    justify-self: stretch;
+    align-items: flex-start;
+    background-color: whitesmoke;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+fullcontainer {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    justify-items: stretch;
+    justify-self: stretch;
+    position: relative;
+    row-gap: 15px;
+    padding: 0;
+    margin: 0;
+    padding-left: 5px;
+    flex-shrink: 1;
+    flex-grow: 1;
+    max-width: calc(100vw - 35%);
+    overflow-x:auto;
+}
+
+.outerContainer {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: stretch;
+    justify-items: stretch;
+    justify-self: stretch;
+    position: relative;
+    row-gap: 10px;
+
+    // & > div {
+    //     padding: 10px;
+    // }
+}
+
+button, kendo-button {
+    background-color: transparent;
+    border-width: 0px;
+    padding: 0px;
+    margin: 0px;
+    color: black;
+}
+
+.notification {
+    display: flex;
+    position: relative;
+    border-radius: 5px;
+    background-color: rgb(252, 245, 193);
+    outline: 1px solid rgb(232, 117, 22);
+    height: 25px;
+    width: 100%;
+    max-width: calc(100vw - 30%);
+    justify-content: space-between;
+    justify-items: stretch;
+    justify-self: stretch;
+    align-items: center;
+    overflow: hidden;
+    column-gap: 5px;
+    color: black;
+    font-size: small;
+    padding: 10px;
+
+    .hightlight {
+        font-weight: bold;
+    }
+
+    .highlightText {
+        color: rgb(194, 26, 44);
+        margin-left: 10px;
+    }
+
+    &>button.right {
+        justify-self: flex-end;
+    }
+
+    kendo-svg-icon.notificationIcon {
+        color: rgb(232, 117, 22);
+    }
+}
+
+h3 {
+    padding: 0;
+    margin: 0;
+}
+
+.filterActivities,
+.activities {
+    border-radius: 5px;
+    border: 1px solid lightgray;
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    width: 100%;
+    flex: 1;
+    row-gap: 10px;
+
+    & > div:not(.headingArea, .filterItem, .fwButton, .filterSelectionArea, .DocumentTypeWithCountSelectionArea, .FwSummaryArea) {
+        padding: 10px;
+    }
+}
+
+.projectNameTitle {
+    width: 100%;
+    max-width: calc(100vw - 35%);
+    box-sizing: border-box;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: block;
+    font-size: medium;
+    font-weight: bold;
+}
+
+.headingArea {
+    display: flex;
+    position: relative;
+    height: 60px;
+    width: 100%;
+    justify-content: space-between;
+    justify-items: stretch;
+    justify-self: stretch;
+    align-items: center;
+    align-content: center;
+    column-gap: 10px;
+    color: black;
+    border-bottom: 1px solid gray;
+    padding: 0px;
+
+    h3 {
+        padding-left: 10px;
+    }
+
+    .left {
+        display: flex;
+        column-gap: 10px;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    & .right {
+        display: flex;
+        justify-content: flex-end;
+        align-items: center;
+    }
+
+    kendo-label {
+        font-size: small;
+        color: darkgray;
+    }
+}
+
+.hyperlinkBtnGreen {
+    color: rgb(65, 189, 162);
+}
+
+.filterSelectionArea {
+    display: flex;
+    justify-content: space-between;
+    justify-self: stretch;
+    flex: 1;
+    justify-items: stretch;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+    height: 80px;
+    gap: 10px;
+
+    & > .filterItem {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        justify-items: left;
+        color: black;
+        background-color: rose;
+
+        & :first-child {
+            font-size: 11px;
+            font-weight: bold;
+        }
+        & > kendo-label {
+            font-size: 11px;
+            font-weight: bold;
+        }
+    }
+
+    kendo-multiselect {
+        width: 125px;
+        height: 40px;
+        max-height: 40px;
+    }
+}
+
+.filterItem {
+        display: flex;
+        flex-direction: column;
+        row-gap: 5px;
+        justify-items: left;
+        color: black;
+        background-color: rose;
+
+        & :first-child {
+            font-size: 11px;
+            font-weight: bold;
+        }
+        & > kendo-label {
+            font-size: 11px;
+            font-weight: bold;
+        }
+    }
+
+.DocumentTypeWithCountSelectionArea {
+    display: flex;
+    justify-content: flex-start;
+    justify-self: stretch;
+    flex: 1;
+    justify-items: stretch;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+    column-gap: 10px;
+    font-size: 11px;
+
+    & > button, kendo-button {
+        width: fit-content;
+        height: 25px;
+        padding: 3px 10px;
+        border-radius: 25px;
+        font-size: 12px;
+    }
+}
+
+.FwSummaryArea {
+    display: flex;
+    justify-content: space-evenly;
+    justify-self: stretch;
+    flex: 1;
+    justify-items: stretch;
+    align-items: center;
+    align-content: center;
+    overflow: hidden;
+    column-gap: 5px;
+    color: black;
+
+    button {
+        height: 55px;
+    }
+
+    .navigateButton {
+        width: 35px;
+        background-color: rgb(235, 239, 238);
+        outline: 1px solid rgb(206, 215, 212);
+        opacity: 1;
+
+        :disabled {
+            opacity: 0.3;
+        }
+    }
+
+    .fwHeading {
+        font-size: large;
+        font-weight: bold;
+    }
+
+    .fwCountData {
+        font-size: small;
+    }
+
+    .TypeToday {
+        background-color: rgb(254, 234, 238);
+    }
+
+    .TypeCurrFW {
+        background-color: rgb(254, 251, 230);
+    }
+
+    .TypeOthers {
+        background-color: white;
+    }
+
+    .TypeFW {
+        flex: 1;
+        justify-content: flex-start;
+        align-items: center;
+        border: 1px solid rgb(160, 160, 160);
+    }
+}
+
+.cornerRoundedTextBox {
+    border-radius: 35px;
+    height: 35px;
+    width: 200px;
+}
+
+.searchIcon {
+    position: relative;
+    color: lightgray;
+    margin: 7px;
+    justify-content: flex-end;
+}
+
+kendo-svg-icon {
+    width: 20px;
+    height: 20px;
+}
+
+.fwButton {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    gap: 0px;
+    justify-content: left;
+    justify-items: left;
+    padding: 10px;
+    align-items: flex-start;
+
+    :first-child {
+        font-size: small;
+        font-weight: bold;
+        color: black;
+    }
+
+    :nth-child(2) {
+        font-size: smaller;
+        font-weight: normal;
+        color: gray;
+    }
+}
+
+.selectedDoc {
+    background-color: rgb(25, 148, 115);
+    color: white;
+}
+
+.unSelectedDoc {
+    background-color: lightgray;
+    color: black;
+}
+
+.verticalSeparator {
+  width: 2px;
+  height: 10px;
+  background-color: gray;
+  align-self: center;
+}
+
+.searchTextBoxWrap {
+    height: 28px;
+    width: 200px;
+    border-radius: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    outline: 1px solid gray;
+    
+    & > kendo-textbox {
+        border-style: none;
+        background-color: transparent;
+        border-width: 0;
+        outline: none;
+
+        & :active {
+            border-width: 0;
+        }
+        ::placeholder {
+            color: lightgray;
+        }
+    }
+}
+
+.tabularHeader {
+    background-color: lightgray;
+    color: black;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.tabularCell {
+    background-color: white;
+    color: black;
+    font-size: 10px;
+}
+
+::ng-deep .k-grid tr.k-state-selected {
+  color: #0d6efd;
+}
+
+.innerFilterActivities {
+    display: flex;
+    padding-top: 0;
+    gap: 10px;
+    flex-direction: column;
+}

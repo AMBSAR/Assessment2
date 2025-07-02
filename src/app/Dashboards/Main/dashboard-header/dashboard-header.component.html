@@ -1,0 +1,77 @@
+<div class="container">
+    <div class="left" id="test-area">
+        <!-- <KENDO_ICON [icon]="iconName"></KENDO_ICON> -->
+        <!-- <kendo-svg-icon [icon]="icons.paperclip"></kendo-svg-icon> -->
+        <!-- <span class="k-icon k-i-level-to-top"> -->
+        <button class="k-icon k-i-level-to-top">
+            <kendo-svg-icon id="home" [icon]="unOrderedListIcon"></kendo-svg-icon>
+        </button>
+        <!-- </span> -->
+        <img id="logo" src="assets\Images\Logo-Dashboard.png" />
+        <span class="mainDashboardSelected">{{SelectedMainDashboard}}</span>
+    </div>
+    <div class="rightContainer">
+        <button class="right buttonText">My Request</button>
+        <button class="right buttonText">Support Ticket</button>
+        <button class="right">
+            <kendo-svg-icon [icon]="messagesIcon"></kendo-svg-icon>
+        </button>
+        <button class="right">
+            <kendo-svg-icon [icon]="helpIcon"></kendo-svg-icon>
+        </button>
+        <button>
+            <kendo-svg-icon [icon]="notificationIcon" class="right"></kendo-svg-icon>
+            @if (showNotification) {
+            <!-- <span class="notificationCount">{{NotificationCount}}</span> -->
+             <mark class="notificationCount">{{NotificationCount}}</mark>
+            }
+        </button>
+        <span class="UserProfile"  #ProfileViewSmallView (click)="onProfileIconClicked()">
+            @if (LoggedInUser?.icon) {
+            <img src={{LoggedInUser.icon}} class="userImage" />
+            }
+            @else {
+            <img src="assets/Images/icons8-user-32.png" class="userImage right" />
+            }
+
+            @if (showNotification) {
+                <mark class="showMsgCount">{{+NotificationCount}}</mark>
+            <!-- <span class="showMsgCount">{{NotificationCount}}</span> -->
+            }
+        </span>
+    </div>
+</div>
+<div id="ProfileView" *ngIf="canShowProfileView" #dashboardProfileView>
+    <ul>
+        <li>
+            <div class="profileData">
+                <div class="profilePic">
+                    @if (LoggedInUser?.icon) {
+                    <img src={{LoggedInUser.icon}} class="userImage" alt={{getFirstLetter()}} />
+                    }
+                    @else {
+                    <img src="assets/Images/icons8-user-32.png" class="userImage" alt={{getFirstLetter()}} />
+                    }
+                </div>
+                <div>
+                    <h4>{{getUserName()}}</h4>
+                    <span style="font-size: smaller; font-weight: normal;padding:0;margin:0;">{{LoggedInUser.emailId}}</span>
+                </div>
+            </div>
+        </li>
+        <li>
+            <div class="options" (click)="onChangeDashboardClicked()">
+                <span>
+                    <kendo-svg-icon [icon]="changeDashboardIcon"></kendo-svg-icon>
+                    Change Dashboard
+                </span>
+                <kendo-svg-icon class="right" [icon]="rightArrowIcon"></kendo-svg-icon>
+            </div>
+        </li>
+        <li>
+            <div class="options" (click)="onLogout()">
+                <span><kendo-svg-icon [icon]="logoutIcon"></kendo-svg-icon>Logout</span>
+            </div>
+        </li>
+    </ul>
+</div>
