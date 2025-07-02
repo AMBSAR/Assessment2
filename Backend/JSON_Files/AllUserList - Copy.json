@@ -1,0 +1,235 @@
+{
+  "users": [
+    {
+      "id": "b59fcadb-79d8-32e3-ae17-b9dfd3ce2329",
+      "ssoid": "salibaj",
+      "firstName": "Bajila",
+      "lastName": "Salim",
+      "emailId": "Bajila.Salim@bakerhughes.com",
+      "role": "Project Engineer",
+      "icon": "",
+      "location": "Bangalore",
+      "country": "IN",
+      "userType": "Contractor",
+      "gessostatus": "A",
+      "disciplines": [
+        {
+          "id": "1",
+          "departments": [
+            {
+              "id": "1"
+            }
+          ]
+        }
+      ],
+      "isActive": true,
+      "createdBy": "EER838VG",
+      "updatedBy": "103022109",
+      "updatedAt": 1747743255,
+      "managerSSO": "212410604",
+      "version": "",
+      "accessprivilegerole": "Project Engineer",
+      "globalId": "CZL958JV",
+      "empId": "BAJISA0515",
+      "loginId": "salibaj"
+    },
+    {
+      "id": "5b8724d1-7f1e-3b4d-66cf-96a61c65a0f8",
+      "ssoid": "samujub",
+      "firstName": "Juby",
+      "lastName": "Samuel",
+      "emailId": "Juby.Samuel@bakerhughes.com",
+      "role": "Executor",
+      "icon": "https://www.freepik.com/free-ai-image/androgynous-avatar-non-binary-queer-person_133543325.htm#fromView=keyword&page=1&position=35&query=Profile+Avatar",
+      "location": "Bangalore",
+      "country": "IN",
+      "userType": "Contractor",
+      "gessostatus": "A",
+      "disciplines": [
+        {
+          "id": "1",
+          "departments": [
+            {
+              "id": "1"
+            }
+          ]
+        }
+      ],
+      "isActive": true,
+      "createdBy": "EER838VG",
+      "updatedBy": "103022109",
+      "updatedAt": 1747743233,
+      "managerSSO": "212410604",
+      "version": "",
+      "accessprivilegerole": "Admin",
+      "globalId": "CHQ682RZ",
+      "empId": "JUBYSA1306",
+      "loginId": "samujub"
+    },
+    {
+      "id": "a63c6626-637a-e486-f044-75cd048ecbc3",
+      "ssoid": "mrama",
+      "firstName": "Amala",
+      "lastName": "MR",
+      "emailId": "Amala.MR@bakerhughes.com",
+      "role": "Executor",
+      "icon": "",
+      "location": "Bangalore",
+      "country": "IN",
+      "userType": "Contractor",
+      "gessostatus": "A",
+      "disciplines": [
+        {
+          "id": "1",
+          "departments": [
+            {
+              "id": "1"
+            }
+          ]
+        }
+      ],
+      "isActive": true,
+      "createdBy": "103022109",
+      "updatedBy": "103022109",
+      "updatedAt": 1747743288,
+      "managerSSO": "212410604",
+      "version": "",
+      "accessprivilegerole": "External User",
+      "globalId": "CEA496AP",
+      "empId": "AMALMR0204",
+      "loginId": "mrama"
+    },
+    {
+      "id": "12d1d0f2-b55f-b6c9-5f14-e444dafc03e3",
+      "ssoid": "mrah",
+      "firstName": "Rahuman",
+      "lastName": "M",
+      "emailId": "Rahuman.M@bakerhughes.com",
+      "role": "Executor",
+      "icon": "",
+      "location": "Bangalore",
+      "country": "IN",
+      "userType": "Contractor",
+      "gessostatus": "A",
+      "disciplines": [
+        {
+          "id": "1",
+          "departments": [
+            {
+              "id": "1"
+            }
+          ]
+        }
+      ],
+      "isActive": true,
+      "createdBy": "EER838VG",
+      "updatedBy": "103022109",
+      "updatedAt": 1747743351,
+      "managerSSO": "212410604",
+      "version": "",
+      "accessprivilegerole": "External User",
+      "globalId": "CWF215JD",
+      "empId": "RAHUMM0424",
+      "loginId": "mrah"
+    },
+    {
+      "id": "fdcb0dfc-f155-a554-bfbe-bd52b25416f5",
+      "ssoid": "vmug",
+      "firstName": "Mugesh Kannan",
+      "lastName": "V",
+      "emailId": "MugeshKannan.V@bakerhughes.com",
+      "role": "Executor",
+      "icon": "",
+      "location": "Bangalore",
+      "country": "IN",
+      "userType": "Contractor",
+      "gessostatus": "A",
+      "disciplines": [
+        {
+          "id": "1",
+          "departments": [
+            {
+              "id": "1"
+            }
+          ]
+        }
+      ],
+      "isActive": true,
+      "createdBy": "EER838VG",
+      "updatedBy": "103022109",
+      "updatedAt": 1747743327,
+      "managerSSO": "212410604",
+      "version": "",
+      "accessprivilegerole": "External User",
+      "globalId": "CQK226PL",
+      "empId": "MUGEKV0908",
+      "loginId": "vmug"
+    },
+    {
+      "id": "b4b1bac5-f3a8-d1a4-c58b-7d24f4cfbd60",
+      "ssoid": "kjamb",
+      "firstName": "Ambili",
+      "lastName": "KJ",
+      "emailId": "Ambili.KJ@bakerhughes.com",
+      "role": "Executor",
+      "icon": "",
+      "location": "Bangalore",
+      "country": "IN",
+      "userType": "Contractor",
+      "gessostatus": "A",
+      "disciplines": [
+        {
+          "id": "1",
+          "departments": [
+            {
+              "id": "1"
+            }
+          ]
+        }
+      ],
+      "isActive": true,
+      "createdBy": "103022109",
+      "updatedBy": "103022109",
+      "updatedAt": 1746533807,
+      "managerSSO": "212410604",
+      "version": "",
+      "accessprivilegerole": "External User",
+      "globalId": "CZU360RX",
+      "empId": "AMBIKJ0526",
+      "loginId": "kjamb"
+    },
+    {
+      "id": "52f061b0-367e-ed1c-d41f-e641a7964243",
+      "ssoid": "raveapa",
+      "firstName": "Aparna",
+      "lastName": "Raveendran",
+      "emailId": "Aparna.Raveendran@bakerhughes.com",
+      "role": "Executor",
+      "icon": "",
+      "location": "Bangalore",
+      "country": "IN",
+      "userType": "Contractor",
+      "gessostatus": "A",
+      "disciplines": [
+        {
+          "id": "1",
+          "departments": [
+            {
+              "id": "1"
+            }
+          ]
+        }
+      ],
+      "isActive": true,
+      "createdBy": "EER838VG",
+      "updatedBy": "103022109",
+      "updatedAt": 1747743265,
+      "managerSSO": "212410604",
+      "version": "",
+      "accessprivilegerole": "External User",
+      "globalId": "CBD772BK",
+      "empId": "APARRA1310",
+      "loginId": "raveapa"
+    }
+  ]
+}

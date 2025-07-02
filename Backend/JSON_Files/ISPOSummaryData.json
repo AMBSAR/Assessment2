@@ -1,0 +1,30 @@
+{
+  "summary": {
+    "PreviousotdPercentage": "11",
+    "previousfw": 22,
+    "previouscompletedontime": "1",
+    "previousbacklogcount": "0",
+    "currentotdPercentage": "20",
+    "currentFW": 23,
+    "currentcompletedontime": "1",
+    "currentbacklogcount": "0",
+    "currentwillmeet": "0",
+    "currentwontmeet": "0",
+    "nextotdPercentage": "33",
+    "nextFW": 24,
+    "nextcompletedontime": "1",
+    "nextbacklogcount": "0",
+    "nextwontmeet": "0",
+    "nextwillmeet": "0",
+    "total": "2836",
+    "completedontime": "794",
+    "latecount": "632",
+    "backlog": "1169",
+    "opencount": "241",
+    "otdpercentage": "17",
+    "percentagecompletion": "28",
+    "autoasignedcount": "0",
+    "unasignedcount": "1408",
+    "latepercentage": 0
+  }
+}

@@ -1,0 +1,1018 @@
+[
+  {
+    "projectId": "9b97c9b3-6006-71b3-2f8a-cdd237105db5",
+    "contractName": "1608614-Supply contract for the supply of JUPITER-MODEL1 PHASE COMPONENTS dated 05-12-2014",
+    "racYear": 2104,
+    "deliveryYear": 2021,
+    "projectStatus": "Inactive",
+    "racYearList": [
+      2104
+    ],
+    "deliveryYearList": [
+      2016,
+      2017,
+      2018,
+      2019,
+      2020,
+      2021
+    ],
+    "projectStatusList": [
+      "Active",
+      "Inactive"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "1608548",
+      "1608549",
+      "1608550",
+      "1608551",
+      "1608552",
+      "1608553",
+      "1608555",
+      "1608556",
+      "1608557",
+      "1608558",
+      "1608559",
+      "1608560",
+      "1608561",
+      "1608562",
+      "1608563",
+      "1608564",
+      "1608565",
+      "1608566",
+      "1608567",
+      "1608568",
+      "1608569",
+      "1608570",
+      "1608571",
+      "1608572",
+      "1608573",
+      "1608574",
+      "1608575",
+      "1608576",
+      "1608577",
+      "1608578",
+      "1608579",
+      "1608585",
+      "1608586",
+      "1608587",
+      "1608588",
+      "1608589",
+      "1608590",
+      "1608591",
+      "1608592",
+      "1608593",
+      "1608594",
+      "1608595",
+      "1608596",
+      "1608597",
+      "1608598",
+      "1608599",
+      "1608600",
+      "1608601",
+      "1608602",
+      "1608603",
+      "1608604",
+      "1608605",
+      "1608606",
+      "1608607",
+      "1608608",
+      "1608609",
+      "1608610",
+      "1608611",
+      "1608612",
+      "1608613",
+      "1608614",
+      "1608615",
+      "1608616",
+      "1608617",
+      "1608618",
+      "1608619",
+      "1608621"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "",
+    "plantSiteCountry": [
+      "RUSSIA"
+    ],
+    "plantSiteCustomerName": [
+      "REP HOLDING"
+    ],
+    "equipSerialNumber": [
+      "G08997",
+      "G08998",
+      "G08999",
+      "G09018",
+      "G09019",
+      "G09020",
+      "G09021",
+      "G09022",
+      "G09023",
+      "G09024",
+      "G09025",
+      "G09026",
+      "G09027",
+      "G09028",
+      "G09029",
+      "G09041",
+      "G09042",
+      "G09043",
+      "G09044",
+      "G09045"
+    ],
+    "driverMmNames": [
+      "2BCL 1000",
+      "2BCL 1000, 2BCL 1000, 2BCL 400",
+      "2BCL 300"
+    ],
+    "drivenMmNames": [
+      "255/A"
+    ],
+    "connectorMmNames": [],
+    "trains": [
+      {
+        "trainId": "0f719ed6-c635-40ff-8e8f-f8825b5034ee",
+        "trainName": "newtest",
+        "mmInfo": []
+      },
+      {
+        "trainId": "93d106ca-42e0-3d33-e4f4-52eb54fae3ac",
+        "trainName": "new test change request",
+        "mmInfo": [
+          {
+            "type": "Driver",
+            "mmNames": [
+              "2BCL 1000"
+            ],
+            "childJobs": [],
+            "jobNumber": "1608601"
+          }
+        ]
+      },
+      {
+        "trainId": "46a34741-d7e2-d63f-1f34-45c3476f1a24",
+        "trainName": "GTA D4",
+        "mmInfo": [
+          {
+            "type": "Driver",
+            "mmNames": [
+              "2BCL 1000"
+            ],
+            "childJobs": [],
+            "jobNumber": "1608596"
+          }
+        ]
+      },
+      {
+        "trainId": "49ed70b8-b600-2949-b5d1-d02f8942882d",
+        "trainName": "Notification",
+        "mmInfo": [
+          {
+            "type": "Driver",
+            "mmNames": [
+              "2BCL 1000, 2BCL 1000, 2BCL 400"
+            ],
+            "childJobs": [],
+            "jobNumber": "1608602"
+          },
+          {
+            "type": "Driven",
+            "mmNames": [
+              "255/A"
+            ],
+            "childJobs": [],
+            "jobNumber": ""
+          }
+        ]
+      },
+      {
+        "trainId": "1a2af551-dc1d-b043-b01d-1b8aa590f7a4",
+        "trainName": "otrfmea",
+        "mmInfo": [
+          {
+            "type": "Driver",
+            "mmNames": [
+              "2BCL 300"
+            ],
+            "childJobs": [],
+            "jobNumber": "1608613"
+          }
+        ]
+      }
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": [
+      "Onshore/Offshore Production"
+    ],
+    "isMyProject": true
+  },
+  {
+    "projectId": "17bcafd3-204a-5e0a-1e02-b350863eca83",
+    "contractName": "1105538-BARRACUDA Main Gas Train 1",
+    "racYear": 2026,
+    "deliveryYear": 2026,
+    "projectStatus": "",
+    "racYearList": [
+      2025,
+      2026
+    ],
+    "deliveryYearList": [],
+    "projectStatusList": [
+      "Active",
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "1105538",
+      "1105539",
+      "1105540",
+      "1105541",
+      "1105542",
+      "1115538",
+      "1115542"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "BR-Brazil",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [
+      "2BCL 1000, 2BCL 1000, 2BCL 300",
+      "2BCL 1000, 2BCL 1000, 2BCL 400"
+    ],
+    "drivenMmNames": [
+      "255/A"
+    ],
+    "connectorMmNames": [
+      "INTEGRALLY GEARED"
+    ],
+    "trains": [
+      {
+        "trainId": "188d221b-7294-a17d-9966-552664820c2a",
+        "trainName": "Thommir1",
+        "mmInfo": [
+          {
+            "type": "Driver",
+            "mmNames": [
+              "2BCL 1000, 2BCL 1000, 2BCL 300"
+            ],
+            "childJobs": [],
+            "jobNumber": ""
+          },
+          {
+            "type": "Driven",
+            "mmNames": [
+              "255/A"
+            ],
+            "childJobs": [],
+            "jobNumber": ""
+          }
+        ]
+      },
+      {
+        "trainId": "95cd26d3-3575-d316-6587-45aafd55943a",
+        "trainName": "11235",
+        "mmInfo": [
+          {
+            "type": "Connector",
+            "mmNames": [
+              "INTEGRALLY GEARED"
+            ],
+            "childJobs": [],
+            "jobNumber": "1105538"
+          }
+        ]
+      },
+      {
+        "trainId": "c96659fb-cbb1-22e5-0bc3-891686904f52",
+        "trainName": "NEE RR",
+        "mmInfo": [
+          {
+            "type": "Driver",
+            "mmNames": [
+              "2BCL 1000, 2BCL 1000, 2BCL 400"
+            ],
+            "childJobs": [],
+            "jobNumber": "1105540"
+          }
+        ]
+      }
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": [],
+    "isMyProject": true
+  },
+  {
+    "projectId": "5e94c50c-183f-2fff-f4bb-767288ea428b",
+    "contractName": "0506214-NMBL Tecpetrol Argentina LM9000 commercial quotati",
+    "racYear": 2025,
+    "deliveryYear": 2025,
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [
+      2025
+    ],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "0506214"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "AR-Argentina",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [
+      "254/A"
+    ],
+    "connectorMmNames": [
+      "Gear  Box"
+    ],
+    "trains": [
+      {
+        "trainId": "7e735289-9927-3bbc-85f0-4a1113e07fda",
+        "trainName": "Ajosh",
+        "mmInfo": [
+          {
+            "type": "Connector",
+            "mmNames": [
+              "Gear  Box"
+            ],
+            "childJobs": [],
+            "jobNumber": ""
+          },
+          {
+            "type": "Driven",
+            "mmNames": [
+              "254/A"
+            ],
+            "childJobs": [],
+            "jobNumber": ""
+          }
+        ]
+      }
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "94f6ee4c-9c29-f3e0-07f2-1e45f66846a1",
+    "contractName": "5842370-BHEL/BPCL Kochi Wet Gas CC 2MCL 1007 Capacity increase Upgrade",
+    "racYear": 2025,
+    "deliveryYear": "",
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "5842370"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "IN-India",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "8cc5970a-f90d-beab-d3d1-a5c7008f1869",
+    "contractName": "8842568-HMI Upg",
+    "racYear": 2025,
+    "deliveryYear": 2026,
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [
+      2026
+    ],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "5844953",
+      "5844954",
+      "5844955",
+      "8842568"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "AO-Angola",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "83871172-d540-bb96-ece2-029e329e284d",
+    "contractName": "8841247-EPNG - SW Eng Study 2721590",
+    "racYear": 2025,
+    "deliveryYear": 2025,
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [
+      2025
+    ],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "8841247"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "393f7a09-aa6a-bcf1-c663-409b17da4b69",
+    "contractName": "0625019-Nigeria Lng Peak Load And Base Estimation Tool - DM 2813496",
+    "racYear": 2025,
+    "deliveryYear": "",
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "0625019"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "e85f6c61-f135-189b-0abd-4cdaee2ac568",
+    "contractName": "8841249-GROUPEMENT TFT MARK VIE FULL PANEL CONTROL SYSTEM UPGRADE",
+    "racYear": 2025,
+    "deliveryYear": 2026,
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [
+      2026
+    ],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "8841249",
+      "8841250",
+      "8841251",
+      "8841252"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "DZ-Algeria",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "6fa72b83-e85b-0757-feba-1292ad33a997",
+    "contractName": "1707501-Frontier Datacenter",
+    "racYear": 2025,
+    "deliveryYear": 2028,
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [
+      2028
+    ],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "1707501",
+      "1707502",
+      "1707503",
+      "1707504",
+      "1707505",
+      "1707506",
+      "1707507",
+      "1707508",
+      "1707509",
+      "1707510",
+      "1707511",
+      "1707512",
+      "1707513",
+      "1707514",
+      "1707515",
+      "1707516"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "US-United States",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "3414f373-6edf-96aa-014b-7675f6c46a39",
+    "contractName": "0625017-No, 6 SFD for EGLNG, DM no. 2730774",
+    "racYear": 2025,
+    "deliveryYear": "",
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "0625017"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "58b08346-865e-9a66-89cc-b5327517219c",
+    "contractName": "8841170-Throttling valve logic modification",
+    "racYear": 2025,
+    "deliveryYear": 2025,
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [
+      2025
+    ],
+    "projectStatusList": [
+      "Active"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "8841170"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "TT-Trinidad and Tobago",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "e924c8da-336d-5557-aa0f-b02da949bfef",
+    "contractName": "5842362-2805756 - ENPPI - ADNOC - upgrade of the seal gas system in 391 392 393",
+    "racYear": 2025,
+    "deliveryYear": 2026,
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [
+      2026
+    ],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "5842362",
+      "5842363",
+      "5842364",
+      "5842365",
+      "5842366",
+      "5842367"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "AE-United Arab Emirates",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "9d483a3c-eb36-184c-eae1-5b494e0c5eae",
+    "contractName": "1707490-Kikeh FPSO",
+    "racYear": 2025,
+    "deliveryYear": 2027,
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [
+      2027
+    ],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "1707490",
+      "1707491",
+      "1707492",
+      "1707493",
+      "1707494",
+      "1717490"
+    ],
+    "installationType": [],
+    "epcName": "925820-YINSON ACACIA LIMITED",
+    "country": "MY-Malaysia",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "1464c846-d529-c4d7-5203-781053a573ca",
+    "contractName": "8841246-SRG POGGIO R. HMIS",
+    "racYear": 2025,
+    "deliveryYear": 2026,
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [
+      2026
+    ],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "8841246"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "IT-Italy",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [
+      "2BCL 1000, 2BCL 1000, 2BCL 300"
+    ],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {
+        "trainId": "c8c95bb6-80a0-c12f-16a4-a9a011fe5277",
+        "trainName": "test",
+        "mmInfo": [
+          {
+            "type": "Driver",
+            "mmNames": [
+              "2BCL 1000, 2BCL 1000, 2BCL 300"
+            ],
+            "childJobs": [],
+            "jobNumber": "8841246"
+          }
+        ]
+      }
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "c57af564-9d0b-742c-2a69-9b9b8bae0623",
+    "contractName": "5840834-ENI VENEZIA VALVOLE CILINDRO",
+    "racYear": 2025,
+    "deliveryYear": 2025,
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [
+      2025
+    ],
+    "projectStatusList": [
+      "Active"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "5840834",
+      "5840835"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "IT-Italy",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "0b352740-bf40-f163-8164-cd0f4983d35d",
+    "contractName": "0500040-FERVO CSG II",
+    "racYear": 2025,
+    "deliveryYear": 2027,
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [
+      2027
+    ],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "0500040",
+      "9000150",
+      "9000151",
+      "9000152",
+      "9000153",
+      "9000154"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "US-United States",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "1b1d0d2f-6169-59e1-b323-4ee22290e971",
+    "contractName": "5849380-Eng study",
+    "racYear": 2025,
+    "deliveryYear": 2025,
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [
+      2025
+    ],
+    "projectStatusList": [
+      "Active"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "5849380"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "GB-United Kingdom",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [
+      "2BCL 1000"
+    ],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {
+        "trainId": "a251b1a9-b343-398a-04d3-4c49e947ed82",
+        "trainName": "vjhgcvg",
+        "mmInfo": []
+      },
+      {
+        "trainId": "0ed283b2-4276-4fff-7b8e-970bcfdd91a7",
+        "trainName": "BH testing train 1",
+        "mmInfo": [
+          {
+            "type": "Driver",
+            "mmNames": [
+              "2BCL 1000"
+            ],
+            "childJobs": [],
+            "jobNumber": "5849380"
+          }
+        ]
+      }
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "b9d835f3-8603-7114-4087-27f50bc7a902",
+    "contractName": "8841199-Control panel upgrades",
+    "racYear": 2025,
+    "deliveryYear": "",
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "8841199"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "ca616f13-6544-88e4-7d33-873a0546420c",
+    "contractName": "8841228-SPLNG Tr2 HMI ph2 virtualization 2769898",
+    "racYear": 2025,
+    "deliveryYear": 2026,
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [
+      2026
+    ],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "8841228",
+      "8841229",
+      "8841230",
+      "8841231",
+      "8841232",
+      "8841233"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "US-United States",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  },
+  {
+    "projectId": "06c45b6d-44fc-17ac-38f4-e4cea1700d43",
+    "contractName": "8841234-SPLNG Tr3 HMI ph2 virtualization 2769902",
+    "racYear": 2025,
+    "deliveryYear": 2026,
+    "projectStatus": "",
+    "racYearList": [
+      2025
+    ],
+    "deliveryYearList": [
+      2026
+    ],
+    "projectStatusList": [
+      "Planned"
+    ],
+    "isActive": true,
+    "jobNumber": [
+      "8841234",
+      "8841235",
+      "8841236",
+      "8841237",
+      "8841238",
+      "8841239"
+    ],
+    "installationType": [],
+    "epcName": "",
+    "country": "US-United States",
+    "plantSiteCountry": [],
+    "plantSiteCustomerName": [],
+    "equipSerialNumber": [],
+    "driverMmNames": [],
+    "drivenMmNames": [],
+    "connectorMmNames": [],
+    "trains": [
+      {}
+    ],
+    "tpsSegment": "",
+    "tpsSegmentList": []
+  }
+]

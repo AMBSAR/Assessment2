@@ -1,0 +1,231 @@
+{
+  "summary": {
+    "weeklydatacount": [
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 19",
+        "isCurrentWeek": "false",
+        "startDate": "2025-05-05",
+        "endDate": "2025-05-11",
+        "total": "7",
+        "notCompleted": "6"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 20",
+        "isCurrentWeek": "false",
+        "startDate": "2025-05-12",
+        "endDate": "2025-05-18",
+        "total": "12",
+        "notCompleted": "8"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 21",
+        "isCurrentWeek": "false",
+        "startDate": "2025-05-19",
+        "endDate": "2025-05-25",
+        "total": "2",
+        "notCompleted": "2"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 22",
+        "isCurrentWeek": "false",
+        "startDate": "2025-05-26",
+        "endDate": "2025-06-01",
+        "total": "9",
+        "notCompleted": "8"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "Today",
+        "isCurrentWeek": "true",
+        "startDate": "2025-06-06",
+        "endDate": "2025-06-06",
+        "total": "0",
+        "notCompleted": "0"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 23",
+        "isCurrentWeek": "true",
+        "startDate": "2025-06-02",
+        "endDate": "2025-06-08",
+        "total": "5",
+        "notCompleted": "4"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 24",
+        "isCurrentWeek": "false",
+        "startDate": "2025-06-09",
+        "endDate": "2025-06-15",
+        "total": "3",
+        "notCompleted": "2"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 25",
+        "isCurrentWeek": "false",
+        "startDate": "2025-06-16",
+        "endDate": "2025-06-22",
+        "total": "1",
+        "notCompleted": "0"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 26",
+        "isCurrentWeek": "false",
+        "startDate": "2025-06-23",
+        "endDate": "2025-06-29",
+        "total": "3",
+        "notCompleted": "0"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 27",
+        "isCurrentWeek": "false",
+        "startDate": "2025-06-30",
+        "endDate": "2025-07-06",
+        "total": "8",
+        "notCompleted": "8"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 28",
+        "isCurrentWeek": "false",
+        "startDate": "2025-07-07",
+        "endDate": "2025-07-13",
+        "total": "5",
+        "notCompleted": "5"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 29",
+        "isCurrentWeek": "false",
+        "startDate": "2025-07-14",
+        "endDate": "2025-07-20",
+        "total": "4",
+        "notCompleted": "4"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 30",
+        "isCurrentWeek": "false",
+        "startDate": "2025-07-21",
+        "endDate": "2025-07-27",
+        "total": "3",
+        "notCompleted": "2"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 31",
+        "isCurrentWeek": "false",
+        "startDate": "2025-07-28",
+        "endDate": "2025-08-03",
+        "total": "2",
+        "notCompleted": "2"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 32",
+        "isCurrentWeek": "false",
+        "startDate": "2025-08-04",
+        "endDate": "2025-08-10",
+        "total": "1",
+        "notCompleted": "1"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 33",
+        "isCurrentWeek": "false",
+        "startDate": "2025-08-11",
+        "endDate": "2025-08-17",
+        "total": "3",
+        "notCompleted": "3"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 34",
+        "isCurrentWeek": "false",
+        "startDate": "2025-08-18",
+        "endDate": "2025-08-24",
+        "total": "1",
+        "notCompleted": "1"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 35",
+        "isCurrentWeek": "false",
+        "startDate": "2025-08-25",
+        "endDate": "2025-08-31",
+        "total": "1",
+        "notCompleted": "1"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 36",
+        "isCurrentWeek": "false",
+        "startDate": "2025-09-01",
+        "endDate": "2025-09-07",
+        "total": "2",
+        "notCompleted": "2"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 37",
+        "isCurrentWeek": "false",
+        "startDate": "2025-09-08",
+        "endDate": "2025-09-14",
+        "total": "7",
+        "notCompleted": "6"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 38",
+        "isCurrentWeek": "false",
+        "startDate": "2025-09-15",
+        "endDate": "2025-09-21",
+        "total": "7",
+        "notCompleted": "7"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 39",
+        "isCurrentWeek": "false",
+        "startDate": "2025-09-22",
+        "endDate": "2025-09-28",
+        "total": "3",
+        "notCompleted": "3"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 40",
+        "isCurrentWeek": "false",
+        "startDate": "2025-09-29",
+        "endDate": "2025-10-05",
+        "total": "3",
+        "notCompleted": "3"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 41",
+        "isCurrentWeek": "false",
+        "startDate": "2025-10-06",
+        "endDate": "2025-10-12",
+        "total": "18",
+        "notCompleted": "17"
+      },
+      {
+        "year": 2025,
+        "fiscalWeek": "FW 42",
+        "isCurrentWeek": "false",
+        "startDate": "2025-10-13",
+        "endDate": "2025-10-19",
+        "total": "6",
+        "notCompleted": "6"
+      }
+    ]
+  }
+}

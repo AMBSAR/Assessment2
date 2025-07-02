@@ -1,0 +1,597 @@
+{
+  "type": "ispo",
+  "columns": [
+    {
+      "column_name": "PROJECT_ID",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 1,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "PRIMARY_RESOURCE_NAME",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 2,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "ACT_ID",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 3,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "ACTIVITY_NAME",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 4,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "STEP_ID",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 5,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "STEP_NAME",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 6,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "EARLY_DATE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 7,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "IMPACTED_NCM",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 8,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "IMPACTED_NCR",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 9,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "PROMISE_DATE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 10,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "LATE_FINISH",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 11,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "COMMENT",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 12,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "ACKNOWLEDGE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 13,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "ACKNOWLEDGE_DATE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 14,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "PROJECT_NAME",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 15,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "ROLE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 16,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "PRIMARY_RESOURCE_SSO",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 17,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "LONG_DUMMY",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 18,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "ACT_TYPE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 19,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "REAL_CODE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 20,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "EARLY_STATUS",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 21,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "ACTUAL_FINISH",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 22,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "TYPE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 23,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "EARLY_DUE_WEEK",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 24,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "AGING",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 25,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "UNIFIER_PROJECT_STATUS",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 26,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "P6-PROJ_CONTR_DELIVERY_DATE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 27,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "PROJECT_PHASE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 28,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "CONTRACT_NUMBER",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 29,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "PL",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 30,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "SUB_PL",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 31,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "RAC_DT",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 32,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "PLANNING_DATE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 33,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "TRAIN_TYPE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 34,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "SYSTEM_DATE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 35,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "ORGANIZATION_NAME",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 36,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "JOB_TYPE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 37,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "DIVISION",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 38,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "EXCLUDE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 39,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "FUNCTION",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 40,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "DOC_TYPE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 41,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "LATE_STATUS",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 42,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "MAIN_FUNCTION",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 43,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "ITEM_AGGREGATION",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 44,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "RCA",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 45,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "PO_NUMBER",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 46,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "VDR_EARLY_DATE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 47,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "WA_IN_JOT_REQUIRED",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 48,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "PO_SPECIFICATION_ID",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 49,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "SIGN-OFF_STATUS",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 50,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "VENDOR",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 51,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "APPROVE_TYPE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 52,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "DOCUMENT_DUE_DATE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 53,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "UNIFIER_DOCUMENT_STATUS",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 54,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "DOC_EMISSION_CODE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 55,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "PM",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 56,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "PROJECT_TYPE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 57,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "DELAY_CUSTOMER",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 58,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "CUSTOMER_DOC",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 59,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "RETURN_DATE_ACTUAL",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 60,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "LAST_SUBMISSION",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 61,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "FIRST_SUBMISSION",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 62,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "DWG_ISSUE_NUMBER_FINAL",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 63,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "PP",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 64,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "ADDITIONAL_CUSTOMER_DOC",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 65,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "PE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 66,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "DOC_RETURN_CODE",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 67,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "RETURN_DATE_PLANNED",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 68,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "PROJECT_STATUS_Primavera",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 69,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "TEAM LEADER",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 70,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "UNIFIER_REVISION_STATUS",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 71,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "Sub_Division",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 72,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "GENERAL",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 73,
+      "isActive": true,
+      "id": null
+    },
+    {
+      "column_name": "FLAG",
+      "display_yn": true,
+      "freeze_yn": false,
+      "sequence": 74,
+      "isActive": true,
+      "id": null
+    }
+  ]
+}
