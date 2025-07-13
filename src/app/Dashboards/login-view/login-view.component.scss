@@ -48,7 +48,7 @@ kendo-textbox {
 }
 
 .inputControlsContainer {
-    width:375;
+    //width:375;
     align-items: first baseline;
 }
 
@@ -156,6 +156,19 @@ kendo-loader {
     outline: 2px solid darkgray;
     border-radius: 1px;
     border-style: none;
-    height: 15px;
-    width: 15px;
+    height: 13px;
+    width: 13px;
+}
+
+.inlineError {
+    font-size: xx-small;
+    color: red;
+}
+
+.inputWrap {
+    display: flex;
+    gap: 5px;
+    overflow: visible;
+    flex-wrap: nowrap;
+    min-width: 420px;
 }

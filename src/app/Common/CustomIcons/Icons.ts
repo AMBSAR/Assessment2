@@ -115,8 +115,9 @@ export const Icon_UserList = {
 
 export const Icon_Favourite = {
     name: "favourite",
-    content: "<path d='M480-678v263l102 78-38-124 114-91H521l-41-126ZM243-144l90-291L96-624h291l93-288 93 288h291L627-435l90 291-237-180-237 180Z'/>",
-    viewBox:"0 -960 960 960"
+    //content: "<path d='M480-678v263l102 78-38-124 114-91H521l-41-126ZM243-144l90-291L96-624h291l93-288 93 288h291L627-435l90 291-237-180-237 180Z'/>",
+    content: "<path d='M0 0h24v24H0V0z' fill='none'/><path d='M12 17.27L18.18 21l-1.64-7.03L22 9.24l-7.19-.61L12 2 9.19 8.63 2 9.24l5.46 4.73L5.82 21 12 17.27z'/>",
+    viewBox:"0 0 24 24"
 }
 
 export const Icon_Unfavourite = {

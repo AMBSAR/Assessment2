@@ -14,6 +14,7 @@ export class ProjectListLoaderService {
   projectDetailsList: ProjectDetails[] | undefined;
   projectList: ProjectData[] | undefined;
   myProjectList: ProjectData[] | undefined;
+  favProjectList: ProjectData[] | undefined;
   // private messageSource = new BehaviorSubject('projectTreeView');
   // projectLoadedMsg = this.messageSource.asObservable();
 
@@ -72,6 +73,34 @@ export class ProjectListLoaderService {
     return [];
   }
 
+  getFavouriteProjectDataList(): any[] {
+    if (!this.isDataLoadingInProgress) {
+      this.favProjectList = [];
+
+      if (this.projectList != null) {
+        this.favProjectList = this.projectList.filter( item => item.isFavourite);
+      }
+
+      if (this.favProjectList != null) {
+        return this.favProjectList.sort((a, b) => a.projectName?.localeCompare(b.projectName));
+      }
+    }
+
+    return [];
+  }
+
+  setItemFavourite(item: any, isFav: boolean) {
+    if (this.projectList != null) {
+        if (item instanceof ProjectData) {
+          let index = this.projectList.findIndex(x => x.projectId == item.projectId);
+
+          if (index >= 0) {
+            this.projectList[index].isFavourite = isFav;
+          }
+        }
+        this.favProjectList = this.projectList.filter( item => item.isFavourite);
+      }
+  }
   // publish(message: string) {
   //   this.messageSource.next(message)
   // }

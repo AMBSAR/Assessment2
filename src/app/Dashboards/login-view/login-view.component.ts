@@ -11,11 +11,19 @@ import { ReactiveFormsModule, FormGroup, FormBuilder, FormControl, Validators } 
 import { Router } from '@angular/router';
 import { KENDO_INDICATORS, LoaderType, LoaderThemeColor, LoaderSize, } from "@progress/kendo-angular-indicators";
 import { firstValueFrom } from 'rxjs/internal/firstValueFrom';
+import { MatFormFieldModule } from '@angular/material/form-field';
+// import { MatInputModule } from '@angular/material/input';
+// import { MatButtonModule } from '@angular/material/button';
+// import { MatDialog, MatDialogModule } from '@angular/material/dialog';
+import { MatDialogModule } from '@angular/material/dialog';
+import { CommonModule } from '@angular/common';
 
 @Component({
   selector: 'app-login-view',
   standalone: true,
-  imports: [KENDO_INPUTS, KENDO_LABELS, KENDO_CHECKBOX, KENDO_BUTTONS, ReactiveFormsModule, KENDO_INDICATORS],
+  imports: [KENDO_INPUTS, KENDO_LABELS, KENDO_CHECKBOX, KENDO_BUTTONS, ReactiveFormsModule, CommonModule,
+            KENDO_INDICATORS, MatFormFieldModule, MatDialogModule],
+            //, MatInputModule, MatButtonModule, MatDialogModule
   templateUrl: './login-view.component.html',
   styleUrl: './login-view.component.scss'
 })
@@ -41,7 +49,7 @@ export class LoginViewComponent implements OnInit {
       {
         userName: new FormControl('', Validators.required),
         password: new FormControl('', Validators.required),
-        isRememberMeSelected: new FormControl(true)
+        isRememberMeSelected: new FormControl(false)
       }
     )
   }

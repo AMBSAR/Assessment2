@@ -32,7 +32,7 @@ import { GridModule, KENDO_GRID } from '@progress/kendo-angular-grid';
   standalone: true,
   //imports: [KENDO_SVGICON, FormsModule, KENDO_GRID, KENDO_LABEL, KENDO_BUTTONS, KENDO_DROPDOWNS],
   imports: [KENDO_SVGICON, FormsModule, KENDO_LABEL, KENDO_BUTTONS, KENDO_CHECKBOX, GridModule,
-            KENDO_DROPDOWNS, CommonModule, KENDO_TEXTBOX, KENDO_LABELS],
+    KENDO_DROPDOWNS, CommonModule, KENDO_TEXTBOX, KENDO_LABELS],
   //schemas: [CUSTOM_ELEMENTS_SCHEMA],
   templateUrl: './ispo-dashboard.component.html',
   styleUrl: './ispo-dashboard.component.scss'
@@ -53,6 +53,7 @@ export class IspoDashboardComponent implements OnInit {
   public ActivityCount: number = 0;
   public searchText: string = '';
   public showFilterActivitiesView: boolean = true;
+  public prevShowFilterActivitiesViewValue: boolean = false;
   public showTabularDataInFullScreen: boolean = false;
   public projectNameText: string = '';
 
@@ -87,12 +88,12 @@ export class IspoDashboardComponent implements OnInit {
   public rightArrowButton = chevronRightIcon;
   public fullScreenExitIcon = Icon_ExitFullScreen;
 
-  
-public gridData: any[] = [
- { id: 1, name: 'Alice', age: 30 },
- { id: 2, name: 'Bob', age: 25 },
- { id: 3, name: 'Charlie', age: 35 }
-];
+
+  public gridData: any[] = [
+    { id: 1, name: 'Alice', age: 30 },
+    { id: 2, name: 'Bob', age: 25 },
+    { id: 3, name: 'Charlie', age: 35 }
+  ];
 
 
   constructor(private eventManager: EventManagerService, private dataLoader: DataLoaderService) { }
@@ -136,7 +137,7 @@ public gridData: any[] = [
     this.loadFWSummaryData();
   }
 
-  loadFWSummaryData(){
+  loadFWSummaryData() {
     this.dataLoader.loadISPOFWData(this.onFWSummaryDataLoaded.bind(this));
   }
 
@@ -150,7 +151,7 @@ public gridData: any[] = [
       this.FiscalWeekDataTemp = fwSummary.summary.weeklydatacount;
 
       if (this.FiscalWeekDataTemp?.length > 0) {
-        this.FiscalWeekDataTemp.forEach(x => x.weekText = "" );
+        this.FiscalWeekDataTemp.forEach(x => x.weekText = "");
         let todayItemIndex = this.FiscalWeekDataTemp.findIndex((x: any) => (x as FiscalWeekData).fiscalWeek == "Today");
 
         if (todayItemIndex == -1) {
@@ -190,7 +191,7 @@ public gridData: any[] = [
 
   setTabularData(data: any) {
     //let fullTabularData : ISPOTabularDataList = this.dataLoader.getISPOTabularData();
-    let fullTabularData : ISPOTabularDataList = data;
+    let fullTabularData: ISPOTabularDataList = data;
     this.tempTabularData = fullTabularData?.activities;
     this.TabularData = this.tempTabularData;
     this.ActivityCount = this.TabularData?.length;
@@ -234,15 +235,15 @@ public gridData: any[] = [
 
   setSummaryData(data: any) {
     //let tempData : SummaryData = this.dataLoader.getISPOSummaryData();
-    let tempData : SummaryData = data;
+    let tempData: SummaryData = data;
     this.SummaryData = tempData?.summary;
     this.DocumentTypeSelectionList = [
       { ID: 1, Label: 'Total Documents', Count: this.SummaryData?.total, isSelected: false },
       { ID: 2, Label: 'Backlogs', Count: this.SummaryData?.backlog, isSelected: false },
       { ID: 3, Label: 'Forecast', Count: this.SummaryData?.opencount, isSelected: false },
-      { ID: 3, Label: 'Not Acknowledged', Count: this.SummaryData?.opencount, isSelected: false },
-      { ID: 3, Label: 'Step', Count: this.SummaryData?.opencount, isSelected: false },
-      { ID: 3, Label: 'RuleStream', Count: this.SummaryData?.opencount, isSelected: false }
+      { ID: 4, Label: 'Not Acknowledged', Count: this.SummaryData?.opencount, isSelected: false },
+      { ID: 5, Label: 'Step', Count: this.SummaryData?.opencount, isSelected: false },
+      { ID: 6, Label: 'RuleStream', Count: this.SummaryData?.opencount, isSelected: false }
     ];
   }
 
@@ -256,10 +257,10 @@ public gridData: any[] = [
   }
 
   searchTable() {
-  const term = this.searchText.toLowerCase();
-  this.TabularData = this.tempTabularData.filter(item =>
-    item.PROJECT_ID.toLowerCase().includes(term) || item.ACTIVITY_NAME.toLowerCase().includes(term)
-  );
+    const term = this.searchText.toLowerCase();
+    this.TabularData = this.tempTabularData.filter(item =>
+      item.PROJECT_ID.toLowerCase().includes(term) || item.ACTIVITY_NAME.toLowerCase().includes(term)
+    );
   }
 
   onFiscalWeek(index: any) {
@@ -273,6 +274,10 @@ public gridData: any[] = [
 
   onViewTypeSelectionChanged() {
     this.reloadFullData();
+  }
+
+  public isSelected(value: string): boolean {
+    return this.selectedViewType.includes(value);
   }
 
   onCloseNotification() {
@@ -289,6 +294,20 @@ public gridData: any[] = [
 
   toggleTabularDataFullScreenMode() {
     this.showTabularDataInFullScreen = !this.showTabularDataInFullScreen;
+
+    if (this.showTabularDataInFullScreen) {
+      this.prevShowFilterActivitiesViewValue = this.showFilterActivitiesView;
+      this.showFilterActivitiesView = false;
+    }
+    else {
+
+      if (this.prevShowFilterActivitiesViewValue && !this.showFilterActivitiesView) {
+        this.showFilterActivitiesView = this.prevShowFilterActivitiesViewValue;
+      }
+    }
+
+    this.eventManager.setProjectSelection
+    this.eventManager.publish(this.showTabularDataInFullScreen ? "FULL_SCREEN_MODE" : "EXIT_FULL_SCREEN_MODE");
   }
 
   onClearFilter() {
@@ -303,5 +322,13 @@ public gridData: any[] = [
 
   onSelectionChange(event: any): void {
     this.selectedCols = event.selectedRows.map((row: { dataItem: { id: any; }; }) => row.dataItem.id);
+  }
+
+  getSelectedText(selectedItems: string[]): string {
+    // const selected = this.items
+    //   .filter(i => this.selectedItems.includes(i.value))
+    //   .map(i => i.text);
+    //selectedItemString: string = selectedItems?.length > 0 ? (selectedItems[0] + (selectedItems.length > 1 ? (selectedItems.length - 1).toString() : "")) : "";
+    return 'Select items...';
   }
 }

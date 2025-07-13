@@ -1,3 +1,72 @@
+// Custom Theming for Angular Material
+// For more information: https://material.angular.io/guide/theming
+@use '@angular/material' as mat;
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$FrontEnd-primary: mat.define-palette(mat.$indigo-palette);
+$FrontEnd-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$FrontEnd-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$FrontEnd-theme: mat.define-light-theme((
+  color: (
+    primary: $FrontEnd-primary,
+    accent: $FrontEnd-accent,
+    warn: $FrontEnd-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($FrontEnd-theme);
+
+// Plus imports for other components in your app.
+
+// Include the common styles for Angular Material. We include this here so that you only
+// have to load a single css file for Angular Material in your app.
+// Be sure that you only ever include this mixin once!
+@include mat.core();
+
+// Define the palettes for your theme using the Material Design palettes available in palette.scss
+// (imported above). For each palette, you can optionally specify a default, lighter, and darker
+// hue. Available color palettes: https://material.io/design/color/
+$FrontEnd-primary: mat.define-palette(mat.$indigo-palette);
+$FrontEnd-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+
+// The warn palette is optional (defaults to red).
+$FrontEnd-warn: mat.define-palette(mat.$red-palette);
+
+// Create the theme object. A theme consists of configurations for individual
+// theming systems such as "color" or "typography".
+$FrontEnd-theme: mat.define-light-theme((
+  color: (
+    primary: $FrontEnd-primary,
+    accent: $FrontEnd-accent,
+    warn: $FrontEnd-warn,
+  ),
+  typography: mat.define-typography-config(),
+  density: 0
+));
+
+// Include theme styles for core and each component used in your app.
+// Alternatively, you can import and @include the theme mixins for each component
+// that you are using.
+@include mat.all-component-themes($FrontEnd-theme);
+
 /* You can add global styles to this file, and also import other style files */
 $primary: rgb(20, 125, 100);
 
@@ -8,4 +77,130 @@ $primary: rgb(20, 125, 100);
 
 * {
   font-family: 'Roboto', sans-serif;
+}
+
+.k-tabstrip .k-item {
+  font-size: 11px; /* Adjust to your preference */
+}
+
+.multiselectForActivities::after {
+  content: '\2335';
+  font-size: 12px;
+  font-weight: bold;
+  padding: 4px;
+  right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    color: black;
+    position: absolute;
+}
+
+.k-tabstrip-items-wrapper .k-item:active, .k-tabstrip-items-wrapper .k-item.k-active, .k-tabstrip-items-wrapper .k-item.k-selected {
+  color: black;
+  font-size: 11px !important;
+}
+
+.k-item.k-selected {
+  font-weight: bold;
+    background-color: white;
+}
+
+.projectTreeTabStrip {
+  font-size: 11px !important;
+  color: black;
+  padding: 5px 2px;
+
+  ::content {
+    font-size: 11px;
+  }
+}
+
+.projectTreeTab {
+  background-color: transparent;
+  font-size: 11px;
+
+    & ::selection {
+    font-weight: bold;
+    background-color: rose;
+    color: red;
+  }
+}
+
+.active-tab {
+  font-size: 11px;
+  background-color: violet;
+  font-weight: bold;
+  color: brown;
+}
+
+.k-tabstrip-md {
+  font-size: 11px;
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.k-checkbox {
+    outline: 2px solid darkgray;
+    border-radius: 1px;
+    border-style: none;
+    height: 13px;
+    width: 13px;
+}
+
+.k-icon.k-i-collapse::before {
+  content: '\2335';           /* FontAwesome caret-down */
+  font-family: "Font Awesome 5 Free"; /* Adjust to your font */
+  font-weight: 900;
+}
+
+/* Override the expand icon */
+.k-icon.k-i-expand::before {
+  content: "\f105";           /* FontAwesome caret-right */
+  font-family: "Font Awesome 5 Free";
+  font-weight: 900;
+}
+
+::ng-deep .k-tabstrip-top > .k-tabstrip-items-wrapper .k-item .k-link {
+    font-size: 11px;
+}
+
+.k-tabstrip-items .k-item {
+  font-size: 11px;
+}
+
+.tabularView {
+  font-size: 11px;
+}
+
+.tabularHeader {
+    background-color: lightgray;
+    color: black;
+    font-size: 11px;
+    font-weight: bold;
+}
+
+.k-grid-header {
+  font-weight: bold;
+}
+
+.tabularCell {
+    background-color: white;
+    color: black;
+    font-size: 10px;
+}
+
+.k-table-row.k-selected > td, .k-grid .k-table-td.k-selected, .k-grid .k-table-row.k-selected > .k-table-td {
+  background-color: transparent;
+  color: blueviolet;
+}
+
+.k-table .k-table-td,
+.k-table .k-table-th {
+  border: 1px solid #ddd; /* or #ccc or custom */
+}
+
+/* Optional: remove internal spacing between cells */
+.k-table {
+  border-collapse: collapse;
 }

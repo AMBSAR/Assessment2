@@ -23,17 +23,19 @@ public moreHorizontalIcon = moreHorizontalIcon;
 public collapseIcon = Icon_LeftArrow;
 public rightIcon = chevronRightIcon;
 
-tabIndex = 0; 
+public selectedTabIndex: number = 0; 
 projectListTypes: string[] = ["All", "My", "Fav"];
 public projectListType: string;
 public showTreeView: boolean = true;
+
+private fullScreenMode: boolean = false;
 
 constructor(private eventManager: EventManagerService) {
   this.projectListType = this.projectListTypes.at(0) as string;
 }
 
 onTabSelect(e: SelectEvent){
-  e.index == 0
+  this.selectedTabIndex = e.index;
   }
 
   ngOnInit(): void {
@@ -41,7 +43,7 @@ onTabSelect(e: SelectEvent){
       this.notifyEvent(msg);
     });
 
-    this.projectListType = this.projectListTypes.at(this.tabIndex) as string;
+    this.projectListType = this.projectListTypes.at(this.selectedTabIndex) as string;
     this.eventManager.setMainDashboard("OTR");
     this.eventManager.publish("MAIN_DASHBOARD_SELECTION_CHANGED");
   }
@@ -49,6 +51,12 @@ onTabSelect(e: SelectEvent){
   notifyEvent(message: string) {
     if (message === "TOGGLE_PROJECT_TREEVIEW") {
         this.toggleProjectTreeView();
+    }
+    if(message == "FULL_SCREEN_MODE") {
+      this.fullScreenMode = true;
+    }
+    if(message == "EXIT_FULL_SCREEN_MODE") {
+      this.fullScreenMode = false;
     }
   }
   
@@ -58,5 +66,9 @@ onTabSelect(e: SelectEvent){
 
   onCollapseTreeView() {
     this.showTreeView = false;
+  }
+
+  canShowTreeView(){
+    return !this.fullScreenMode && this.showTreeView;
   }
 }

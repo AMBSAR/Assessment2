@@ -24,6 +24,8 @@ body,html {
     justify-items:stretch;
     justify-content: stretch;
     column-gap: 15px;
+    overflow: hidden;
+    flex-wrap: nowrap;
 }
 
 .leftsideView {
@@ -102,25 +104,3 @@ app-project-tree {
     flex: 1;
     overflow-y: hidden;
 }
-
-::ng-deep .k-tabstrip-top > .k-tabstrip-items-wrapper .k-item .k-link {
-    font-size: 11px;
-}
-
-::ng-deep .k-item.k-selected {
-    border-width: 2px;
-    font-weight: bold;
-    color: violet;
-}
-
-::ng-deep .k-tabstrip-top > .k-tabstrip-items-wrapper .k-item:active, .k-tabstrip-top > .k-tabstrip-items-wrapper .k-item.k-active {
-    border-width: 2px;
-    font-weight: bold;
-    color: red;
-}
-
-::ng-deep .k-tabstrip-top > .k-tabstrip-items-wrapper .k-item:active, .k-tabstrip-top > .k-item.k-selected .k-link-text {
-    font-weight: bold;
-    color: blueviolet;
-}
-//.k-tabstrip-top > .k-tabstrip-items-wrapper .k-item .k-link

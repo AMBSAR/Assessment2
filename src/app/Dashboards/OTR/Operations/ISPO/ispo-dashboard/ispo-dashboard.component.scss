@@ -29,7 +29,7 @@ fullcontainer {
     flex-shrink: 1;
     flex-grow: 1;
     max-width: calc(100vw - 35%);
-    overflow-x:auto;
+    overflow-x: auto;
 }
 
 .outerContainer {
@@ -52,7 +52,8 @@ fullcontainer {
     // }
 }
 
-button, kendo-button {
+button,
+kendo-button {
     background-color: transparent;
     border-width: 0px;
     padding: 0px;
@@ -111,10 +112,10 @@ h3 {
     background-color: white;
     width: 100%;
     flex: 1;
-    row-gap: 10px;
 
-    & > div:not(.headingArea, .filterItem, .fwButton, .filterSelectionArea, .DocumentTypeWithCountSelectionArea, .FwSummaryArea) {
+    &>div:not(.headingArea, .filterItem, .fwButton, .filterSelectionArea, .DocumentTypeWithCountSelectionArea, .FwSummaryArea, .tabularWrap) {
         padding: 10px;
+        row-gap: 10px;
     }
 }
 
@@ -133,7 +134,7 @@ h3 {
 .headingArea {
     display: flex;
     position: relative;
-    height: 60px;
+    height: 45px;
     width: 100%;
     justify-content: space-between;
     justify-items: stretch;
@@ -160,6 +161,8 @@ h3 {
         display: flex;
         justify-content: flex-end;
         align-items: center;
+        gap: 10px;
+        margin-right: 10px;
     }
 
     kendo-label {
@@ -170,6 +173,7 @@ h3 {
 
 .hyperlinkBtnGreen {
     color: rgb(65, 189, 162);
+    font-size: 12px;
 }
 
 .filterSelectionArea {
@@ -184,7 +188,7 @@ h3 {
     height: 80px;
     gap: 10px;
 
-    & > .filterItem {
+    &>.filterItem {
         display: flex;
         flex-direction: column;
         row-gap: 5px;
@@ -196,7 +200,8 @@ h3 {
             font-size: 11px;
             font-weight: bold;
         }
-        & > kendo-label {
+
+        &>kendo-label {
             font-size: 11px;
             font-weight: bold;
         }
@@ -210,22 +215,23 @@ h3 {
 }
 
 .filterItem {
-        display: flex;
-        flex-direction: column;
-        row-gap: 5px;
-        justify-items: left;
-        color: black;
-        background-color: rose;
+    display: flex;
+    flex-direction: column;
+    row-gap: 5px;
+    justify-items: left;
+    color: black;
+    background-color: rose;
 
-        & :first-child {
-            font-size: 11px;
-            font-weight: bold;
-        }
-        & > kendo-label {
-            font-size: 11px;
-            font-weight: bold;
-        }
+    & :first-child {
+        font-size: 11px;
+        font-weight: bold;
     }
+
+    &>kendo-label {
+        font-size: 11px;
+        font-weight: bold;
+    }
+}
 
 .DocumentTypeWithCountSelectionArea {
     display: flex;
@@ -239,7 +245,8 @@ h3 {
     column-gap: 10px;
     font-size: 11px;
 
-    & > button, kendo-button {
+    &>button,
+    kendo-button {
         width: fit-content;
         height: 25px;
         padding: 3px 10px;
@@ -310,13 +317,6 @@ h3 {
     width: 200px;
 }
 
-.searchIcon {
-    position: relative;
-    color: lightgray;
-    margin: 7px;
-    justify-content: flex-end;
-}
-
 kendo-svg-icon {
     width: 20px;
     height: 20px;
@@ -356,51 +356,64 @@ kendo-svg-icon {
 }
 
 .verticalSeparator {
-  width: 2px;
-  height: 10px;
-  background-color: gray;
-  align-self: center;
+    width: 1px;
+    height: 17px;
+    background-color: lightgray;
+    align-self: center;
 }
 
-.searchTextBoxWrap {
-    height: 28px;
-    width: 200px;
-    border-radius: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    outline: 1px solid gray;
-    
-    & > kendo-textbox {
-        border-style: none;
-        background-color: transparent;
-        border-width: 0;
-        outline: none;
+// .searchTextBoxWrap {
+//     height: 28px;
+//     width: 200px;
+//     border-radius: 30px;
+//     display: flex;
+//     justify-content: space-between;
+//     align-items: center;
+//     outline: 1px solid gray;
 
-        & :active {
-            border-width: 0;
-        }
+//     & > kendo-textbox {
+//         border-style: none;
+//         background-color: transparent;
+//         border-width: 0;
+//         outline: none;
+
+//         & :active {
+//             border-width: 0;
+//         }
+//         ::placeholder {
+//             color: lightgray;
+//         }
+//     }
+// }
+
+.searchTextBoxWrap {
+    position: relative;
+    width: 250px;
+    //align-items: center;
+
+    &>kendo-textbox {
+        border-radius: 30px;
+        background-color: transparent;
+        width: 100%;
+        padding: 8px 35px 8px 10px;
+        /* right padding for the icon */
+        font-size: 12px;
+
         ::placeholder {
             color: lightgray;
         }
     }
-}
 
-.tabularHeader {
-    background-color: lightgray;
-    color: black;
-    font-size: 11px;
-    font-weight: bold;
-}
-
-.tabularCell {
-    background-color: white;
-    color: black;
-    font-size: 10px;
-}
-
-::ng-deep .k-grid tr.k-state-selected {
-  color: #0d6efd;
+    .searchIcon {
+        color: gray;
+        position: absolute;
+        right: 15px;
+        top: 50%;
+        transform: translateY(-50%);
+        pointer-events: none;
+        /* so clicking the icon doesn't block typing */
+        font-size: 16px;
+    }
 }
 
 .innerFilterActivities {
@@ -408,4 +421,21 @@ kendo-svg-icon {
     padding-top: 0;
     gap: 10px;
     flex-direction: column;
+}
+
+.newclassforMultiSelect {
+    content: '\25BC';
+    /* Down arrow unicode */
+    font-size: 12px;
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+}
+
+.tabularWrap {
+    height: 100%;
+    flex-wrap: wrap;
+    overflow: auto;
 }

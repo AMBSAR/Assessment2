@@ -66,11 +66,29 @@ kendo-treeview {
     background-color: transparent;
 }
 
+.parentText {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    width: 140px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
 
 .text {
     display: block;
     font-size: 11px;
     width: 160px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+
+.trainText {
+    font-size: 11px;
+    display: block;
+    width: 130px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -141,35 +159,6 @@ favButton {
     cursor: pointer;
 }
 //.k-tabstrip-top > .k-tabstrip-items-wrapper .k-item .k-link
-::nd-deep .k-checkbox-md, .k-checkbox, .k-checkbox-wrap{
-    outline: 2px solid pink !important;
-    height: 15px !important;
-    width: 15px !important;
-    border-radius: 0 !important;
-}
-
-::ng-deep .k-checkbox-checked {
-    border-radius: 0 !important;
-}
-
-.custom-checkbox {
-    outline: 2px solid blue !important;
-    height: 15px !important;
-    width: 15px !important;
-    border-radius: 0 !important;
-
-    & :checked {
-        border-radius: 0;
-    }
-}
-
-
-::ng-deep .k-treeview *, .k-treeview *::before, .k-treeview *::after > .k-checkbox-md, .k-checkbox, .k-checkbox-wrap{
-    outline: 2px solid red !important;
-    height: 12px !important;
-    width: 12px !important;
-    border-radius: 0 !important;
-}
 
 .customExpandCollapse{
     font-size: 14px;

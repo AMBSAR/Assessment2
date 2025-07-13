@@ -1,5 +1,5 @@
 <div class="container">
-    @if(showTreeView) {
+    @if(canShowTreeView()) {
     <div class="leftsideView">
         <div class="headingArea">
             <kendo-label text="Filter Contracts" class="left" #Heading />
@@ -9,25 +9,25 @@
         <div class="separator">
         </div>
         <div class="treeViewArea">
-            <kendo-tabstrip (tabSelect)="onTabSelect($event)">
-                <kendo-tabstrip-tab title="My Contracts" [selected]="true">
+            <kendo-tabstrip (tabSelect)="onTabSelect($event)" class="projectTreeTabStrip" size="small">
+                <kendo-tabstrip-tab title="My Contracts" [selected]="true" [cssClass]="selectedTabIndex === 0 ? 'active-tab' : 'projectTreeTab'">
                     <ng-template kendoTabContent>
                         <div class="content">
-                            <app-project-tree [Type]="projectListType"></app-project-tree>
+                            <app-project-tree Type='My'></app-project-tree>
                         </div>
                     </ng-template>
                 </kendo-tabstrip-tab>
-                <kendo-tabstrip-tab title="All Contracts">
+                <kendo-tabstrip-tab title="All Contracts" [cssClass]="selectedTabIndex === 1 ? 'active-tab' : 'projectTreeTab'">
                     <ng-template kendoTabContent>
                         <div class="content">
-                            <app-project-tree [Type]="projectListType"></app-project-tree>
+                            <app-project-tree Type='All'></app-project-tree>
                         </div>
                     </ng-template>
                 </kendo-tabstrip-tab>
-                <kendo-tabstrip-tab title="Favourites">
+                <kendo-tabstrip-tab title="Favourites" [cssClass]="selectedTabIndex === 2 ? 'active-tab' : 'projectTreeTab'">
                     <ng-template kendoTabContent>
                         <div class="content">
-                            <app-project-tree [Type]="projectListType"></app-project-tree>
+                            <app-project-tree Type='Fav'></app-project-tree>
                         </div>
                     </ng-template>
                 </kendo-tabstrip-tab>

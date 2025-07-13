@@ -18,6 +18,7 @@ import { DataLoaderService } from '../../../../Services/DataLoader/data-loader.s
 import { EventManagerService } from '../../../../Services/EventManager/event-manager.service';
 import { ProjectListLoaderService } from '../../../../Services/ProjectListLoader/project-list-loader.service';
 import { Icon_Favourite } from '../../../../Common/CustomIcons/Icons';
+import { ThisReceiver } from '@angular/compiler';
 
 
 @Component({
@@ -68,7 +69,12 @@ export class ProjectTreeComponent implements OnInit {
 
   ngOnInit(): void {
     this.isDataLoading = true;
+    if (this.projectDataListTemp?.length == 0) {
     this.projectDataLoader.loadDataFromServer(this.onProjectDataLoaded.bind(this));
+    }
+    else {
+      this.onProjectDataLoaded();
+    }
     this.eventMgr.eventHandler.subscribe((msg: string) => {
 
       this.onNotify(msg);
@@ -84,14 +90,29 @@ export class ProjectTreeComponent implements OnInit {
     else if (this.Type === 'My') {
       this.projectDataListTemp = await this.projectDataLoader.getMyProjectDataList();
     }
+    else if (this.Type === 'Fav') {
+      this.projectDataListTemp = await this.projectDataLoader.getFavouriteProjectDataList();
+    }
+
+    await this.applySearch();
+    this.isDataLoading = false;
+  }
+
+  async reloadFavProjects() {
+    this.isDataLoading = true;
+    if (this.Type === 'Fav') {
+      this.projectDataListTemp = await this.projectDataLoader.getFavouriteProjectDataList();
+    }
 
     await this.applySearch();
     this.isDataLoading = false;
   }
 
   public hasChildren = (item: any) => {
-
-    if (item instanceof ProjectData) {
+    if (item.Items !== undefined) {
+      return item.Items != null && item.Items.length > 0;
+    }
+    else if (item instanceof ProjectData) {
       return item.trains != null && item.trains.length > 0;
     }
     else if (item instanceof TrainData) {
@@ -104,7 +125,7 @@ export class ProjectTreeComponent implements OnInit {
     return false;
   }
 
-  public children = (dataitem: any): Observable<any[]> => of(dataitem.trains || dataitem.jobNumbers);
+  public children = (dataitem: any): Observable<any[]> => of(dataitem.Items || dataitem.trains || dataitem.jobNumbers);
 
   public fetchChildren = (item: any) => {
 
@@ -150,9 +171,16 @@ export class ProjectTreeComponent implements OnInit {
     return '';
   }
 
+  public isTrainData(item: any) {
+    return !this.showFavouriteIcon(item);
+  }
+
   public showFavouriteIcon = (item: any) => {
 
     if (item instanceof TrainData) {
+      return false;
+    }
+    else if (this.isParentItem(item)) {
       return false;
     }
 
@@ -173,11 +201,27 @@ export class ProjectTreeComponent implements OnInit {
     if (this.searchText != undefined && this.searchText != '') {
       if (this.projectDataListTemp?.length > 0) {
         this.ProjectDataList = [];
+        let curItems: { Name: string; Items: any[] } = { Name: "Current Items", Items: [] };
+        let pastItems: { Name: string; Items: any[] } = { Name: "Past Items", Items: [] };
+
         this.projectDataListTemp.forEach((x: any) => {
           if (x.projectName != undefined && (x.projectName as string).includes(this.searchText)) {
-            this.ProjectDataList.push(x);
+
+            if (x.isActive) {
+              curItems.Items.push(x);
+            }
+            else {
+              pastItems.Items.push(x);
+            }
           }
         });
+
+        if (curItems.Items.length > 0) {
+          this.ProjectDataList.push(curItems);
+        }
+        if (pastItems.Items.length > 0) {
+          this.ProjectDataList.push(pastItems);
+        }
       }
     }
     else {
@@ -193,13 +237,23 @@ export class ProjectTreeComponent implements OnInit {
     let project = this.ProjectDataList.at(index);
 
     if (this.checkedKeys.indexOf(event.item.index) > -1) {
-      this.selectedProjects.push(project);
+      if (project.Items !== undefined) {
+        this.selectedProjects.push(project.Items);
+      }
+      else {
+        this.selectedProjects.push(project);
+      }
     }
     else {
-      let projIndex = this.selectedProjects.indexOf(project);
-
-      if (projIndex > -1) {
-        this.selectedProjects.splice(projIndex);
+      if (project.Items !== undefined) {
+        let projIndex = this.selectedProjects.indexOf(project.Items[0]);
+        this.selectedProjects.splice(projIndex, project.Items.length);
+      }
+      else {
+        let projIndex = this.selectedProjects.indexOf(project);
+        if (projIndex > -1) {
+          this.selectedProjects.splice(projIndex);
+        }
       }
     }
 
@@ -241,16 +295,24 @@ export class ProjectTreeComponent implements OnInit {
     }
   }
 
-  isTrainItem(item: any) : boolean {
-  try {
+  isTrainItem(item: any): boolean {
+    try {
       return item.trainId !== undefined;
     } catch (error) {
       return false;
     }
   }
 
+  isParentItem(item: any): boolean {
+    try {
+      return item.Items !== undefined;
+    } catch (error) {
+      return false;
+    }
+  }
+
   isChecked(item: any) {
-    return item.isChecked;
+    return !item.isChecked;
   }
 
   onCheck(item: any, event: any) {
@@ -260,5 +322,10 @@ export class ProjectTreeComponent implements OnInit {
 
   onFavouriteBtnClick(item: any) {
     item.isFavourite = !item.isFavourite;
+    this.projectDataLoader.setItemFavourite(item, item.isFavourite);
+
+    if (this.Type === 'Fav') {
+      this.reloadFavProjects();
+    }
   }
 }
