@@ -102,7 +102,7 @@ $primary: rgb(20, 125, 100);
 
 .k-item.k-selected {
   font-weight: bold;
-    background-color: white;
+  background-color: white;
 }
 
 .projectTreeTabStrip {
@@ -115,26 +115,14 @@ $primary: rgb(20, 125, 100);
   }
 }
 
-.projectTreeTab {
+.treeViewArea .projectTreeTab {
   background-color: transparent;
   font-size: 11px;
-
-    & ::selection {
-    font-weight: bold;
-    background-color: rose;
-    color: red;
-  }
 }
 
-.active-tab {
-  font-size: 11px;
-  background-color: violet;
+.treeViewArea .active-tab {
   font-weight: bold;
-  color: brown;
-}
-
-.k-tabstrip-md {
-  font-size: 11px;
+  color: black;
 }
 
 html, body { height: 100%; }
@@ -192,7 +180,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .k-table-row.k-selected > td, .k-grid .k-table-td.k-selected, .k-grid .k-table-row.k-selected > .k-table-td {
   background-color: transparent;
-  color: blueviolet;
+  color: rgb(102, 110, 180);
 }
 
 .k-table .k-table-td,
@@ -203,4 +191,48 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 /* Optional: remove internal spacing between cells */
 .k-table {
   border-collapse: collapse;
+}
+
+.operationsTab {
+ & > .k-item {
+  font-size: 11px;
+}
+}
+
+.operationsTab .active-tab {
+  font-weight: bold;
+  color: black;
+  border: none;
+}
+
+
+.treeViewArea .k-link-text, .operationsTab .k-link-text{
+  font-size: 11px !important;
+  color: #555;
+}
+
+.treeViewArea .k-item {
+  border: 5px solid rgb(235, 239, 238);
+  background-color: rgb(235, 239, 238);
+}
+
+.operationsTab .k-item {
+  border: none;
+  background-color: transparent;
+}
+
+.operationsTab > .k-tabstrip-content {
+  max-height: calc(100vh - 160px);
+}
+
+.k-grid .k-alt {
+  background-color: #f3b0b0; /* Light gray for alternate rows */
+}
+
+.even-row {
+  background-color: #ffffff;
+}
+
+.odd-row {
+  background-color: #f5f5f5;
 }

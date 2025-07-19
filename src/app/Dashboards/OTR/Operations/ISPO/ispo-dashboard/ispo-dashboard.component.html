@@ -155,7 +155,8 @@
             </div>
             <div class="tabularWrap">
                 <kendo-grid [data]="TabularData" [selectable]="{ mode: 'single' }" kendoGridSelectBy="id"
-                    [selectedKeys]="selectedCols" (selectionChange)="onSelectionChange($event)" class="tabularView">
+                    [selectedKeys]="selectedCols" (selectionChange)="onSelectionChange($event)" class="tabularView"
+                    [height]="showTabularDataInFullScreen ? 450 : 300">
                     <kendo-grid-column [class]="'tabularCell'" field="PROJECT_ID" title="Project ID" [width]="70"
                         [headerClass]="'tabularHeader'"> </kendo-grid-column>
                     <kendo-grid-column [class]="'tabularCell'" field="ACT_ID" title="Activity ID" [width]="70"

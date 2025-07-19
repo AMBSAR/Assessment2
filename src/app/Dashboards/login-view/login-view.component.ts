@@ -152,5 +152,10 @@ export class LoginViewComponent implements OnInit {
       this.showMessage = true;
     }
   }
+
+  isErrorMsgDisplayed() {
+    return (this.loginForm.get('userName')?.hasError('required') && this.loginForm.get('userName')?.touched || 
+    this.loginForm.get('password')?.hasError('required') && this.loginForm.get('password')?.touched);
+  }
 }
 

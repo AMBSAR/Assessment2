@@ -5,7 +5,8 @@
 .container {
   display: flex;
   flex-direction: row;
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
+  overflow: hidden;
   flex-shrink: 1;
   justify-content:space-between;
   background-color: rgb(5, 50, 43);

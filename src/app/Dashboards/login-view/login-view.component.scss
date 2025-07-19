@@ -55,12 +55,14 @@ kendo-textbox {
 .login {
     align-self: center;
     height: 35px;
-    width: 300px;
-    margin-bottom: 15px;
-
+    width: 350px;
 //    &:hover {
 //     box-shadow: 0px 0px 2px 3px rgba(120, 207, 228, 0.35);
 //     }
+}
+
+.inputs {
+    margin-bottom: 15px;
 }
 
 kendo-textbox {
@@ -170,5 +172,14 @@ kendo-loader {
     gap: 5px;
     overflow: visible;
     flex-wrap: nowrap;
-    min-width: 420px;
+    min-width: 350px;
+}
+
+.inputWrapWithError {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+    overflow: visible;
+    flex-wrap: nowrap;
+    min-width: 350px;
 }

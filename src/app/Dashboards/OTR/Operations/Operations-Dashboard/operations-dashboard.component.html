@@ -23,37 +23,37 @@
         </div>
     </div>
     <div class="tabContainer">
-        <kendo-tabstrip (tabSelect)="onTabSelect($event)">
-            <kendo-tabstrip-tab title="ISPO" [selected]="true">
+        <kendo-tabstrip (tabSelect)="onTabSelect($event)" [className]="'operationsTab'">
+            <kendo-tabstrip-tab title="ISPO" [selected]="true" [cssClass]="selectedTabIndex === 0 ? 'active-tab' : 'tabContent'">
                 <ng-template kendoTabContent class="content">
                     <app-ispo-dashboard></app-ispo-dashboard>
                 </ng-template>
             </kendo-tabstrip-tab>
-            <kendo-tabstrip-tab title="VDR" class="content">
+            <kendo-tabstrip-tab title="VDR" [cssClass]="selectedTabIndex === 1 ? 'active-tab' : 'tabContent'">
                 <ng-template kendoTabContent>
                     <!-- <app-page-tbd></app-page-tbd> -->
                      <span>VDR</span>
                 </ng-template>
             </kendo-tabstrip-tab>
-            <kendo-tabstrip-tab title="VDR Revision" class="content">
+            <kendo-tabstrip-tab title="VDR Revision" [cssClass]="selectedTabIndex === 2 ? 'active-tab' : 'tabContent'">
                 <ng-template kendoTabContent>
                     <!-- <app-page-tbd></app-page-tbd> -->
                      <span>VDR Rev</span>
                 </ng-template>
             </kendo-tabstrip-tab>
-            <kendo-tabstrip-tab title="OTD Trends" class="content">
+            <kendo-tabstrip-tab title="OTD Trends" [cssClass]="selectedTabIndex === 3 ? 'active-tab' : 'tabContent'">
                 <ng-template kendoTabContent>
                     <!-- <app-page-tbd></app-page-tbd> -->
                      <span>OTD Trends</span>
                 </ng-template>
             </kendo-tabstrip-tab>
-            <kendo-tabstrip-tab title="Engineering Productivity" class="content">
+            <kendo-tabstrip-tab title="Engineering Productivity" [cssClass]="selectedTabIndex === 4 ? 'active-tab' : 'tabContent'">
                 <ng-template kendoTabContent class="content">
                     <!-- <app-page-tbd></app-page-tbd> -->
                      <span>Engg Productivity</span>
                 </ng-template>
             </kendo-tabstrip-tab>
-            <kendo-tabstrip-tab title="Technical Alignment" class="content">
+            <kendo-tabstrip-tab title="Technical Alignment" [cssClass]="selectedTabIndex === 5 ? 'active-tab' : 'tabContent'">
                 <ng-template kendoTabContent class="content">
                     <!-- <app-page-tbd></app-page-tbd> -->
                      <span>Technical Alignment</span>

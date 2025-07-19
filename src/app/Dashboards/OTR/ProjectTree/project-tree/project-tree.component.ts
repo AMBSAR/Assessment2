@@ -96,6 +96,10 @@ export class ProjectTreeComponent implements OnInit {
 
     await this.applySearch();
     this.isDataLoading = false;
+
+    this.selectedProjects = [];
+    this.dataLoader.setProjectSelection(this.selectedProjects);
+    this.dataLoader.publish("PROJECT_SELECTION_CHANGED");
   }
 
   async reloadFavProjects() {

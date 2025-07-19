@@ -16,7 +16,7 @@
                 <div>
                     <div class="inputs">
                         <kendo-label class="k-display-block mandatory" [for]="textbox" text="SSO ID"></kendo-label>
-                        <div class="inputWrap">
+                        <div [className]="isErrorMsgDisplayed() ? 'inputWrapWithError' : 'inputWrap'">
                             <kendo-textbox #textbox kendoTypography fontSize="sm" [maxlength]='35' [clearButton]="true"
                                 placeholder="SSO / 4-3-1" formControlName="userName" class="text-indented login"
                                 type="text"></kendo-textbox>
@@ -29,7 +29,7 @@
                     <div class="inputs">
                         <kendo-label class="k-display-block mandatory" [for]="password" text="Password"></kendo-label>
 
-                        <div class="inputWrap">
+                        <div [className]="isErrorMsgDisplayed() ? 'inputWrapWithError' : 'inputWrap'">
                             <kendo-textbox #password [maxlength]='16' [clearButton]="true" class="text-indented login"
                                 placeholder="Password" type="password" formControlName="password"
                                 (inputFocus)="autoPopulatePassword()" />

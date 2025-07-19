@@ -53,10 +53,16 @@
 
 kendo-treeview {
     height: 100%;
-    //max-height: calc(100vh - 57%);
+    width: 100%;
+    max-height: calc(100vh - 275px);
     overflow-y: auto;
     scrollbar-width: thin;
     flex-shrink: 1;
+}
+
+.treeviewWrap {
+    height: 100%;
+    width: 100%;
 }
 
 .loader {
@@ -70,7 +76,7 @@ kendo-treeview {
     display: block;
     font-size: 12px;
     font-weight: bold;
-    width: 140px;
+    width: 160px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -79,7 +85,7 @@ kendo-treeview {
 .text {
     display: block;
     font-size: 11px;
-    width: 160px;
+    width: 180px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -88,7 +94,7 @@ kendo-treeview {
 .trainText {
     font-size: 11px;
     display: block;
-    width: 130px;
+    width: 150px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -97,7 +103,7 @@ kendo-treeview {
 .jobText {
     font-size: 11px;
     display: block;
-    width: 110px;
+    width: 130px;
     overflow: hidden;
     white-space: nowrap;
     text-overflow: ellipsis;
@@ -105,7 +111,7 @@ kendo-treeview {
 
 .nodeItem {
     display: flex;
-    justify-content: stretch;
+    justify-content: space-between;
     align-items: center;
 }
 

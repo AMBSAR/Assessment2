@@ -1,6 +1,5 @@
 <div class="container">
-    @if(canShowTreeView()) {
-    <div class="leftsideView">
+    <div class="leftsideView" [hidden]="!canShowTreeView()">
         <div class="headingArea">
             <kendo-label text="Filter Contracts" class="left" #Heading />
             <button kendoButton [svgIcon]="moreHorizontalIcon"></button>
@@ -9,7 +8,7 @@
         <div class="separator">
         </div>
         <div class="treeViewArea">
-            <kendo-tabstrip (tabSelect)="onTabSelect($event)" class="projectTreeTabStrip" size="small">
+            <kendo-tabstrip (tabSelect)="onTabSelect($event)" [className]="'projectTreeTabStrip'" size="small" [size]="'small'">
                 <kendo-tabstrip-tab title="My Contracts" [selected]="true" [cssClass]="selectedTabIndex === 0 ? 'active-tab' : 'projectTreeTab'">
                     <ng-template kendoTabContent>
                         <div class="content">
@@ -77,7 +76,6 @@
     </div>
     <!-- <div class="verticalSeparator">
         </div> -->
-    }
     <div class="rightSideView">
         <div class="rightContainer">
             <router-outlet style="flex:1; height: 100%; width: 100%; justify-content: stretch;"></router-outlet>

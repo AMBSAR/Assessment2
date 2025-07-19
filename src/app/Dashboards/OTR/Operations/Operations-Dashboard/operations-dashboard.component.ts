@@ -19,10 +19,11 @@ import { PageTBDComponent } from '../../../page-tbd/page-tbd.component';
 export class OperationsDashboardComponent {
   LastUploadedDate:string = '04 Feb 2025';
   YTD_Value: number = 72;
+  selectedTabIndex: number = 0;
 
 
 
   onTabSelect(e: SelectEvent){
-  
+  this.selectedTabIndex = e.index;
     }
 }
