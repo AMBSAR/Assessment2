@@ -63,10 +63,18 @@
         <kendo-svg-icon [icon]="expanded ? rightIcon : downIcon" class="customExpandCollapse"></kendo-svg-icon>
       </ng-template> -->
 
+      <ng-template kendoTreeViewExpandIcon let-node>
+        <kendo-svg-icon [icon]="rightIcon" class="customExpandCollapse"></kendo-svg-icon>
+      </ng-template>
+      <ng-template kendoTreeViewCollapseIcon let-node>
+        <kendo-svg-icon [icon]="downIcon" class="customExpandCollapse"></kendo-svg-icon>
+      </ng-template>
+
       <ng-template kendoTreeViewNodeTemplate let-dataItem>
         <div class="nodeItem" [class.selected]="isSelected(dataItem)" (click)="onNodeClick(dataItem)">
           <!-- <kendo-checkbox [checkedState]="dataItem.IsSelected" (valueChange)="onItemChecked(dataItem)" id="nodeCheckbox"></kendo-checkbox> -->
-          <kendo-label class="k-display-block" [ngClass]="isJobItem(dataItem) ? 'jobText' : isTrainData(dataItem) ? 'trainText' : isParentItem(dataItem) ? 'parentText' : 'text'"
+          <kendo-label class="k-display-block"
+            [ngClass]="isJobItem(dataItem) ? 'jobText' : isTrainData(dataItem) ? 'trainText' : isParentItem(dataItem) ? 'parentText' : 'text'"
             id="nodeProjectName">{{fetchText(dataItem)}}</kendo-label>
           @if (showFavouriteIcon(dataItem)) {
           <kendo-svg-icon class="favButton" [ngClass]="dataItem.isFavourite ? 'favourite' : 'unfavourite'"

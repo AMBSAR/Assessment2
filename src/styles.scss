@@ -199,10 +199,21 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 }
 }
 
-.operationsTab .active-tab {
+.operationsTab .active-tab, .operationsTab .k-item.k-state-active {
   font-weight: bold;
   color: black;
-  border: none;
+  border-bottom: 3px solid #007BFF; /* your desired color */
+  padding-bottom: 2px;
+}
+
+.operationsTab > .k-tabstrip-items-wrapper .k-item:active, .operationsTab > .k-tabstrip-items-wrapper .k-item.k-active {
+  border-bottom: 3px solid green; /* your desired color */
+  padding-bottom: 2px;
+  border-bottom-color: var(--kendo-color-primary) !important;
+}
+
+.operationsTab .k-item {
+  border-bottom: none; /* Remove default if needed */
 }
 
 
@@ -223,6 +234,7 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
 
 .operationsTab > .k-tabstrip-content {
   max-height: calc(100vh - 160px);
+  scrollbar-width: thin;
 }
 
 .k-grid .k-alt {

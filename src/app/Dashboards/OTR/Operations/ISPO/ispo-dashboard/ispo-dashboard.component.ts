@@ -331,4 +331,12 @@ export class IspoDashboardComponent implements OnInit {
     //selectedItemString: string = selectedItems?.length > 0 ? (selectedItems[0] + (selectedItems.length > 1 ? (selectedItems.length - 1).toString() : "")) : "";
     return 'Select items...';
   }
+
+  getSelectedItems( values: string[]): string {
+    // const selected = fullItems.filter(item =>
+    //   selectedIds.includes(item.id)
+    // );
+    return values.length > 3
+                          ? values.slice(0, 3).map(i => i).join(', ') + '…' : values.map(i => i).join(', ');
+  }
 }

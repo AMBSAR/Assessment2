@@ -21,6 +21,7 @@
 .cornerRoundedTextBox {
     border-radius: 30px;
     height: 25px;
+    font-size: 11px;
 }
 
 .searchIcon {
@@ -39,7 +40,8 @@
     width: 100%;
     text-align: center;
     margin: 0;
-    font-size: small;
+    font-size: 11px;
+    align-items: center;
 }
 
 .advSearchContent {

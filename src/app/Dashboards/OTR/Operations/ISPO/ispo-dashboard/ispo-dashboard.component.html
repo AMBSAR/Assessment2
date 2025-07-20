@@ -34,8 +34,11 @@
                         <div class="filterItem">
                             <kendo-label text="View As" />
                             <kendo-multiselect [data]="viewTypes" [(ngModel)]="selectedViewType"
-                                class="multiselectForActivities"
-                                (ngModelChange)="onViewTypeSelectionChanged()"></kendo-multiselect>
+                                class="multiselectForActivities" (ngModelChange)="onViewTypeSelectionChanged()">
+                                <!-- <ng-template kendoMultiSelectTagTemplate let-values>
+                                    {{ getSelectedItems(values) }}
+                                </ng-template> -->
+                            </kendo-multiselect>
                         </div>
                         <div class="filterItem">
                             <kendo-label text="Functions" />

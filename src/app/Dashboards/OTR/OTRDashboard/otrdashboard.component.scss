@@ -26,12 +26,13 @@ body,html {
     column-gap: 15px;
     overflow: hidden;
     flex-wrap: nowrap;
+    background-color: rgb(248, 250, 249);
 }
 
 .leftsideView {
     width: 400px;
     border-right: 1px solid lightgray;
-    background-color: whitesmoke;
+    background-color: white;
 }
 
 .headingArea {
