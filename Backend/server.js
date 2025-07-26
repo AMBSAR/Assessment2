@@ -20,7 +20,7 @@ const ispoTabularDataJsonFilePath = "./JSON_Files/ISPO_TabularData.json";
 const ispoFWSummaryDataJsonFilePath = "./JSON_Files/ISPOFiscalWeekData.json";
 const ispoSummaryDataJsonFilePath = "./JSON_Files/ISPOSummaryData.json";
 
-const userDataList = JSON.parse(fs.readFileSync(userJsonFilePath, 'utf-8'));
+//const userDataList = JSON.parse(fs.readFileSync(userJsonFilePath, 'utf-8'));
 
 function readUserDataList() {
     fs.readFile(userJsonFilePath, 'utf8', (err, data) => {
@@ -35,6 +35,11 @@ function readUserDataList() {
         }
     });
 }
+
+const loadUsers = () => {
+    const jsonData = fs.readFileSync(userJsonFilePath, 'utf-8');
+    return JSON.parse(jsonData);
+};
 
 app.get('/login', (req, res) => {
     console.log("login request came");
@@ -138,6 +143,120 @@ app.get('/login', (req, res) => {
         }
 });
 
+app.post('/login', async (req, res) => {
+    console.log("login request came");
+    const { user, pwd } = req.body;
+    //const { user, pwd } = req.body;
+    const userDataList = loadUsers();
+
+    //console.log("userdatalist - " + userDataList)
+    // Log the search parameters
+    console.log(`Search user: ${user}, pwd: ${pwd}`);
+    //     fs.readFile(userJsonFilePath, 'utf8', (err, data) => {
+    //     if (err) {
+    //       console.error('Error reading file:', err);
+    //       return res.status(500).json({ error: 'Failed to read User Data' });
+    //     }
+
+    //     try {
+    //       const jsonData = JSON.parse(data);
+    //       res.json(jsonData);
+    //     } catch (parseErr) {
+    //       console.error('Error parsing JSON:', parseErr);
+    //       res.status(500).json({ error: 'Invalid JSON format' });
+    //     }
+    //   });
+    // userData = null;
+    // responseMsg = "Authentication Failed";
+    // reqStatus = 500;
+    // if (userDataList == null) {
+    //     readUserDataList();
+    // }
+    // msg = "Incorrect username or password";
+    // try {
+    //     if (pwd == user + "online") {
+    //         if (userDataList != null | undefined && userDataList.users != null | undefined && userDataList.users.length > 0) {
+    //             userIndex = userDataList.users.findIndex(x => x.ssoid == user);
+    //             console.log("user index = " + userIndex);
+    //             if (userIndex != -1) {
+    //                 userData = userDataList.users[userIndex];
+    //                 reqStatus = 100;
+    //                 responseMsg = "Authentication Success";
+    //                 userData = JSON.parse(JSON.stringify(userData));
+    //                 console.log(JSON.stringify(userData));
+    //             }
+    //         }
+    //     }
+
+    //     data = JSON.stringify(userData);
+    //     console.log("sending data --- " + data);
+    //     //res.status(reqStatus).end(JSON.stringify(userData));
+    //     //res.status(reqStatus).json({ "id": "jhijhk", "ssoid": "samujub"});
+    //     res.status(reqStatus).json({ data });
+    //     //res.status(reqStatus).send({userData});
+    //     // console.log("Response" + JSON.stringify(res.json));
+    // } catch (parseErr) {
+    //     console.error('Error parsing JSON:', parseErr);
+    //     res.status(500).json({ error: 'Failed' });
+    // }
+    if (pwd == user + "online") {
+        userIndex = userDataList.users.findIndex(x => x.ssoid == user);
+        console.log("Index = " + userIndex);
+        if (userIndex == -1) {
+            return res.status(401).json({ message: 'Invalid username or password' });
+        }
+
+        const loggedInUser = userDataList.users[userIndex];
+        const { password, ...userWithoutPassword } = loggedInUser;
+
+        res.json({ message: 'Login successful', 
+                   user: userWithoutPassword });
+        // if (user == "samujub") {
+        //     res.json({
+        //         id: "5b8724d1-7f1e-3b4d-66cf-96a61c65a0f8",
+        //         ssoid: "samujub",
+        //         firstName: "Juby",
+        //         lastName: "Samuel",
+        //         emailId: "Juby.Samuel@bakerhughes.com",
+        //         role: "Executor",
+        //         icon: "https://th.bing.com/th/id/OIP.ZG4mPcYIdId4JwVvksfhvwHaJ3?r=0&pid=ImgDet&w=184&h=245&c=7&dpr=1.3&cb=idpwebpc2",
+        //         isActive: true,
+        //         accessprivilegerole: "Admin",
+        //         globalId: "CHQ682RZ",
+        //         empId: "JUBYSA1306",
+        //         loginId: "samujub"
+        //     });
+        // }
+        // else if (user == "salibaj") {
+        //     res.json({
+        //         id: "b59fcadb-79d8-32e3-ae17-b9dfd3ce2329",
+        //         ssoid: "salibaj",
+        //         firstName: "Bajila",
+        //         lastName: "Salim",
+        //         emailId: "Bajila.Salim@bakerhughes.com",
+        //         role: "Project Engineer",
+        //         icon: "https://unsplash.com/photos/shallow-focus-photography-of-woman-outdoor-during-day-rDEOVtE7vOs",
+        //         isActive: true,
+        //         accessprivilegerole: "Project Engineer",
+        //         globalId: "CZL958JV",
+        //         empId: "BAJISA0515",
+        //         loginId: "salibaj"
+        //     });
+        // }
+        // else {
+        //     res.status(500).json({ error: 'Authentication Failed' });
+        // }
+
+        // }
+        // else {
+        //         res.status(500).json({ error: 'Incorrect credentials!' });
+        //     }
+    }
+    else {
+        console.log(`invalid user`);
+        res.status(500).json({ error: 'Incorrect credentials!' });
+    }
+});
 app.get('/allcontracts', (req, res) => {
     console.log("allcontracts request came");
     fs.readFile(contractListJsonFilePath, 'utf8', (err, data) => {

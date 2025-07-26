@@ -22,8 +22,8 @@ import { CommonModule } from '@angular/common';
   selector: 'app-login-view',
   standalone: true,
   imports: [KENDO_INPUTS, KENDO_LABELS, KENDO_CHECKBOX, KENDO_BUTTONS, ReactiveFormsModule, CommonModule,
-            KENDO_INDICATORS, MatFormFieldModule, MatDialogModule],
-            //, MatInputModule, MatButtonModule, MatDialogModule
+    KENDO_INDICATORS, MatFormFieldModule, MatDialogModule],
+  //, MatInputModule, MatButtonModule, MatDialogModule
   templateUrl: './login-view.component.html',
   styleUrl: './login-view.component.scss'
 })
@@ -73,8 +73,32 @@ export class LoginViewComponent implements OnInit {
       //     userData = x;
       //   }
       // });
-      this.dataLoader.login(user, pwd).subscribe((x: any) => {
-        this.isLoginSuccess(x, rememberData, user, pwd);
+      this.dataLoader.login(user, pwd).subscribe({
+        next: (x: any) => {
+          this.isLoginSuccess(x, rememberData, user, pwd);
+        },
+        error: (err) => {
+          if (err.name === 'TimeoutError') {
+            this.Message = 'Request timed out. Please try again.';
+          }
+          else if (err.status === 0) {
+            this.Message = 'Server unreachable.';
+          }
+          else if (err.error?.message) {
+            this.Message = err.error.message;
+          }
+          else {
+            if (this.loginForm.valid) {
+            this.Message = "Invalid UserName or Password";
+          }
+          else {
+            this.Message = "UserName and Password fields are mandatory";
+          }
+          }
+
+          this.showLoader = false;
+          this.showMessage = true;
+        }
       });
     }
   }
@@ -123,7 +147,7 @@ export class LoginViewComponent implements OnInit {
   }
 
   isLoginSuccess(x: any, rememberData: boolean, user: string, pwd: string) {
-    let userData = x;
+    let userData = x.user;
     try {
       if (userData != null && userData != undefined && userData.ssoid != undefined) {
         this.authService.setCurrentUser(userData);
@@ -132,7 +156,7 @@ export class LoginViewComponent implements OnInit {
         if (rememberData) {
           this.saveUserData(user, pwd);
         }
-        
+
         this.router.navigate(['/main']);
       }
       else {
@@ -154,8 +178,8 @@ export class LoginViewComponent implements OnInit {
   }
 
   isErrorMsgDisplayed() {
-    return (this.loginForm.get('userName')?.hasError('required') && this.loginForm.get('userName')?.touched || 
-    this.loginForm.get('password')?.hasError('required') && this.loginForm.get('password')?.touched);
+    return (this.loginForm.get('userName')?.hasError('required') && this.loginForm.get('userName')?.touched ||
+      this.loginForm.get('password')?.hasError('required') && this.loginForm.get('password')?.touched);
   }
 }
 

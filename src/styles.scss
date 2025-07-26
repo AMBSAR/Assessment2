@@ -232,6 +232,15 @@ body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
   background-color: transparent;
 }
 
+.operationsTab .k-item {
+  border: none;
+  background-color: transparent;
+}
+
+.operationsTab > .k-tabstrip-items .k-tabstrip-item.k-active {
+  border-color: red;
+}
+
 .operationsTab > .k-tabstrip-content {
   max-height: calc(100vh - 160px);
   scrollbar-width: thin;

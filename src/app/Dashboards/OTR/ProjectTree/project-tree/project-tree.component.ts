@@ -256,7 +256,7 @@ export class ProjectTreeComponent implements OnInit {
       else {
         let projIndex = this.selectedProjects.indexOf(project);
         if (projIndex > -1) {
-          this.selectedProjects.splice(projIndex);
+          this.selectedProjects.splice(projIndex, 1);
         }
       }
     }
